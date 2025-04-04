@@ -1,0 +1,9 @@
+<wpml-config>
+    <admin-texts>
+        <key name="theme_mods_viral-express">
+            <key name="viral_express_th_text" />
+            <key name="viral_express_archive_readmore" />
+            <key name="viral_express_footer_copyright" />
+        </key>
+    </admin-texts>
+</wpml-config>

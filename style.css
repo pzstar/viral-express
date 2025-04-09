@@ -464,7 +464,6 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-    outline: 0;
 }
 
 input[type="text"],
@@ -523,7 +522,6 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-    outline: 0;
 }
 
 input[type="text"],
@@ -567,12 +565,10 @@ a:hover {
 }
 
 a:focus {
-    outline: 0;
 }
 
 a:hover,
 a:active {
-    outline: 0;
 }
 
 
@@ -920,6 +916,16 @@ ht-sidebar-style5 .ht-site-wrapper .widget_viral_express_image_box {
 
 .wp-block-social-links:not(.is-style-logos-only) .wp-social-link {
     padding: 0;
+}
+
+.widget_text a{
+    text-decoration: underline;
+}
+
+.wp-block-search__button{
+    border: 0;
+    padding: 10px 25px;
+    color: #FFF;
 }
 
 
@@ -2777,6 +2783,10 @@ body.ht-boxed #ht-page {
 .page-content li,
 .entry-content li {}
 
+.entry-content a{
+    text-decoration: underline;
+}
+
 .page-links {
     clear: both;
     margin: 0 0 15px;
@@ -4223,6 +4233,10 @@ article.comment-body {
 
 .comment-list .comment-header {
     margin-bottom: 15px;
+}
+
+.comment-list .comment-content a{
+    text-decoration: underline;
 }
 
 .comment-list .vcard .fn {
@@ -6427,6 +6441,14 @@ body.ht-no-footer-space #ht-colophon {
     line-height: 90px;
     color: #333;
     font-size: 30px;
+}
+
+.ht-search-close button{
+    background: none;
+    font-size: inherit;
+    height: auto;
+    min-height: auto;
+    padding: 0;
 }
 
 .ht-search-container {
@@ -11005,6 +11027,12 @@ a.add_to_wishlist.button.alt {
 #ht-mobile-menu {
     display: none;
     margin-left: 20px;
+}
+
+#ht-mobile-menu .menu-collapser{
+    background: none;
+    padding: 0;
+    height: auto;
 }
 
 .collapse-button {

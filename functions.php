@@ -313,7 +313,6 @@ function viral_express_scripts() {
     wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array(), VIRAL_EXPRESS_VER);
 
     wp_enqueue_style('viral-express-style', get_stylesheet_uri(), array(), VIRAL_EXPRESS_VER);
-    wp_style_add_data('viral-express-style', 'rtl', 'replace');
 
     wp_enqueue_style('materialdesignicons', get_template_directory_uri() . '/css/materialdesignicons.css', array(), VIRAL_EXPRESS_VER);
     wp_enqueue_style('eleganticons', get_template_directory_uri() . '/css/eleganticons.css', array(), VIRAL_EXPRESS_VER);

@@ -31,7 +31,7 @@ jQuery(function ($) {
     $('.ht-search-button a').click(function () {
         $('.ht-search-wrapper').addClass('ht-search-triggered');
         setTimeout(function () {
-            $('.ht-search-wrapper .search-field').focus();
+            viralExpressSearchModalFocus($('.ht-search-wrapper'));
         }, 1000);
         return false;
     });
@@ -64,6 +64,7 @@ jQuery(function ($) {
 
     $('#ht-mobile-menu .menu-collapser').on('click', function () {
         $(this).next('ul').slideToggle();
+        viralExpressMenuFocus($(' #ht-mobile-menu'));
     });
 
     $('#ht-responsive-menu .dropdown-nav').on('click', function () {
@@ -354,5 +355,53 @@ jQuery(function ($) {
         setTimeout(function () {
             startTime()
         }, 500);
+    }
+
+    var viralExpressMenuFocus = function (elem) {
+        viralExpressKeyboardLoop(elem);
+
+        elem.on('keyup', function (e) {
+            if (e.keyCode === 27) {
+                $(' #ht-responsive-menu').hide();
+                $('.menu-collapser').focus();
+            }
+        });
+    };
+
+    var viralExpressSearchModalFocus = function (elem) {
+        viralExpressKeyboardLoop(elem);
+
+        elem.on('keydown', function (e) {
+            if (e.keyCode == 27 && elem.hasClass('ht-search-triggered')) {
+                elem.removeClass('ht-search-triggered');
+                $('.ht-search-button a').focus();
+            }
+        });
+    };
+
+    var viralExpressKeyboardLoop = function (elem) {
+        var tabbable = elem.find('select, input, textarea, button, a').filter(':visible');
+
+        var firstTabbable = tabbable.first();
+        var lastTabbable = tabbable.last();
+
+        /*set focus on first input*/
+        firstTabbable.focus();
+
+        /*redirect last tab to first input*/
+        lastTabbable.on('keydown', function (e) {
+            if ((e.which === 9 && !e.shiftKey)) {
+                e.preventDefault();
+                firstTabbable.focus();
+            }
+        });
+
+        /*redirect first shift+tab to last input*/
+        firstTabbable.on('keydown', function (e) {
+            if ((e.which === 9 && e.shiftKey)) {
+                e.preventDefault();
+                lastTabbable.focus();
+            }
+        });
     }
 });

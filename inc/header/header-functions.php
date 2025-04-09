@@ -79,7 +79,7 @@ function viral_express_responsive_navigation() {
         'theme_location' => 'primary',
         'container_id' => 'ht-mobile-menu',
         'menu_id' => 'ht-responsive-menu',
-        'items_wrap' => '<div class="menu-collapser"><div class="collapse-button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></div></div><ul id="%1$s" class="%2$s">%3$s</ul>',
+        'items_wrap' => '<button class="menu-collapser"><div class="collapse-button"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></div></button><ul id="%1$s" class="%2$s">%3$s</ul>',
         'fallback_cb' => false
     );
 
@@ -308,7 +308,7 @@ if (!function_exists('viral_express_header_search_wrapper')) {
         $form .= '<form role="search" method="get" class="search-form" action="' . esc_url(home_url('/')) . '">';
         $form .= '<input autocomplete="off" type="search" class="search-field" placeholder="' . $placeholder_text . '" value="' . get_search_query() . '" name="s" />';
         $form .= '<button type="submit" class="search-submit"><i class="icofont-search"></i></button>';
-        $form .= '<div class="ht-search-close"><div class="viral-express-selected-icon"><i class="icofont-close-line-squared"></i></div></div>';
+        $form .= '<div class="ht-search-close"><button class="viral-express-selected-icon"><i class="icofont-close-line-squared"></i></button></div>';
         $form .= '</form>';
         $form .= '</div>';
         $form .= '</div>';

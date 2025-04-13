@@ -363,51 +363,6 @@ if (!function_exists('viral_express_single_comment')) {
 
 }
 
-/**
- * Returns true if a blog has more than 1 category.
- *
- * @return bool
- */
-function viral_express_categorized_blog() {
-    if (false === ($all_the_cool_cats = get_transient('viral_express_categories'))) {
-        // Create an array of all the categories that are attached to posts.
-        $all_the_cool_cats = get_categories(array(
-            'fields' => 'ids',
-            'hide_empty' => 1,
-            // We only need to know if there is more than one category.
-            'number' => 2,
-        ));
-
-        // Count the number of categories that are attached to the posts.
-        $all_the_cool_cats = count($all_the_cool_cats);
-
-        set_transient('viral_express_categories', $all_the_cool_cats);
-    }
-
-    if ($all_the_cool_cats > 1) {
-        // This blog has more than 1 category so viral_express_categorized_blog should return true.
-        return true;
-    } else {
-        // This blog has only 1 category so viral_express_categorized_blog should return false.
-        return false;
-    }
-}
-
-/**
- * Flush out the transients used in viral_express_categorized_blog.
- */
-function viral_express_category_transient_flusher() {
-    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-        return;
-    }
-    // Like, beat it. Dig?
-    delete_transient('viral_express_categories');
-}
-
-add_action('edit_category', 'viral_express_category_transient_flusher');
-add_action('save_post', 'viral_express_category_transient_flusher');
-
-
 if (!function_exists('viral_express_entry_author')) {
 
     function viral_express_entry_author() {
@@ -431,7 +386,7 @@ if (!function_exists('viral_express_entry_category')) {
 
     function viral_express_entry_category() {
         $categories_list = get_the_category_list(', ');
-        if ($categories_list && viral_express_categorized_blog()) {
+        if ($categories_list) {
             echo '<span class="entry-categories">';
             echo '<i class="mdi mdi-folder"></i>' . $categories_list;
             echo '</span>';
@@ -444,7 +399,7 @@ if (!function_exists('viral_express_entry_tag')) {
 
     function viral_express_entry_tag() {
         $tags_list = get_the_tag_list('<i class="mdi mdi-bookmark"></i>', ', ');
-        if ($tags_list && viral_express_categorized_blog()) {
+        if ($tags_list) {
             echo '<span class="entry-tags">';
             echo $tags_list;
             echo '</span>';

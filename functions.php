@@ -358,7 +358,6 @@ require get_template_directory() . '/inc/theme-functions.php';
  */
 require get_template_directory() . '/inc/customizer/customizer.php';
 
-
 /**
  * Icons Array
  */
@@ -383,6 +382,11 @@ require get_template_directory() . '/inc/frontpage-hooks.php';
  * Hooks
  */
 require get_template_directory() . '/inc/theme-hooks.php';
+
+/**
+ * Welcome
+ */
+require get_template_directory() . '/welcome/welcome.php';
 
 /**
  * AriColor

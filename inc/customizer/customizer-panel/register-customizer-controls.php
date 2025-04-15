@@ -36,46 +36,6 @@ if (!class_exists('Viral_Express_Register_Customizer_Controls')) {
                 'description' => sprintf(esc_html__('Overwrites the homepage displays setting and shows the frontpage for Customizer %s', 'viral-express'), '<a href="javascript:wp.customize.panel(\'viral_express_front_page_panel\').focus()">' . esc_html__('Front Page Sections', 'viral-express') . '</a>') . '<br/><br/>' . esc_html__('Do not enable this option if you want to use Elementor in home page.', 'viral-express')
             )));
 
-            /* ============IMPORTANT LINKS============ */
-            $wp_customize->add_section('viral_express_implink_section', array(
-                'title' => esc_html__('Important Links', 'viral-express'),
-                'priority' => 1000
-            ));
-
-            $wp_customize->add_setting('viral_express_imp_links', array(
-                'sanitize_callback' => 'viral_express_sanitize_text'
-            ));
-
-            $wp_customize->add_control(new Viral_Express_Text_Info_Control($wp_customize, 'viral_express_imp_links', array(
-                'section' => 'viral_express_implink_section',
-                'description' => '<a class="viral-express-implink" href="https://demo.hashthemes.com/viral-express/" target="_blank">' . esc_html__('Live Demo', 'viral-express') . '</a><a class="viral-express-implink" href="https://hashthemes.com/support/forum/viral-express/" target="_blank">' . esc_html__('Support Forum', 'viral-express') . '</a><a class="viral-express-implink" href="https://www.facebook.com/hashtheme/" target="_blank">' . esc_html__('Like Us in Facebook', 'viral-express') . '</a>',
-            )));
-
-            $wp_customize->add_setting('viral_express_rate_us', array(
-                'sanitize_callback' => 'viral_express_sanitize_text'
-            ));
-
-            $wp_customize->add_control(new Viral_Express_Text_Info_Control($wp_customize, 'viral_express_rate_us', array(
-                'section' => 'viral_express_implink_section',
-                'description' => sprintf(esc_html__('Please do rate our theme if you liked it %s', 'viral-express'), '<a class="viral-express-implink" href="https://wordpress.org/support/theme/viral/reviews/?filter=5" target="_blank">Rate/Review</a>'),
-            )));
-
-            $wp_customize->add_setting('viral_express_setup_instruction', array(
-                'sanitize_callback' => 'viral_express_sanitize_text'
-            ));
-
-            $wp_customize->add_control(new Viral_Express_Text_Info_Control($wp_customize, 'viral_express_setup_instruction', array(
-                'section' => 'viral_express_implink_section',
-                'description' => __('<strong>Instruction - Setting up Home Page</strong><br/>1. Create a new
-                            page (any title, like Home )<br/>
-        2. In right column: Page Attributes -> Template: Home Page<br/>
-        3. Click on Publish<br/>
-        4. Go to Appearance-> Customize -> General settings -> Static Front Page<br/>
-        5. Select - A static page<br/>
-        6. In Front Page, select the page that you created in the step 1<br/>
-        7. Save changes', 'viral-express'),
-            )));
-
             /** For Additional Hooks */
             do_action('viral_express_new_options', $wp_customize);
         }

@@ -221,12 +221,6 @@ function viral_express_display_content_widget($content) {
 
 add_filter('the_content', 'viral_express_display_content_widget');
 
-function viral_express_demo_config($demos) {
-    return include get_template_directory() . '/inc/theme-panel/demo-importer/import_config.php';
-}
-
-add_action('hdi_import_files', 'viral_express_demo_config');
-
 if (!function_exists('viral_express_add_custom_fonts')) {
 
     function viral_express_add_custom_fonts($fonts) {

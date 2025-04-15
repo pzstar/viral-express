@@ -15,7 +15,7 @@ GNU General Public License for more details.
 Contributors: hashthemes
 Requires at least: 6.3
 Tested up to: 6.7
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -28,6 +28,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+
+= 1.0.2 - Apr 14 2025 =
+* Screenshot Image license added
+* Pro Option Added
 
 = 1.0 - Apr 04 2025 =
 * Initial release
@@ -95,3 +99,16 @@ Viral Express WordPress Theme bundles the following third-party resources:
 * Source: https://github.com/marcj/css-element-queries
 * License: The MIT License (MIT)
 * License Url: https://github.com/marcj/css-element-queries/blob/master/LICENSE
+
+ScreenShot Images
+https://wordpress.org/photos/photo/896640776b/
+https://wordpress.org/photos/photo/950675826d/
+https://wordpress.org/photos/photo/54667f5e22/
+https://wordpress.org/photos/photo/31767a9e15/
+https://wordpress.org/photos/photo/48862c872f/
+https://wordpress.org/photos/photo/34267ef93a/
+https://wordpress.org/photos/photo/13967ef698/
+https://wordpress.org/photos/photo/30566ddf31/
+
+* License: CC0 license
+* License Url: License: https://wordpress.org/photos/license/

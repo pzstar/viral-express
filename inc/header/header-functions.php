@@ -166,7 +166,7 @@ function viral_express_top_header_ticker() {
 }
 
 function viral_express_top_left_header() {
-    $left_header = get_theme_mod('viral_express_th_left_display', 'date');
+    $left_header = get_theme_mod('viral_express_th_left_display', 'social');
     ?>
     <div class="ht-th-left th-<?php echo esc_attr($left_header) ?>">
         <?php
@@ -191,7 +191,7 @@ function viral_express_top_left_header() {
 }
 
 function viral_express_top_right_header() {
-    $right_header = get_theme_mod('viral_express_th_right_display', 'social');
+    $right_header = get_theme_mod('viral_express_th_right_display', 'text');
     ?>
     <div class="ht-th-right th-<?php echo esc_attr($right_header) ?>">
         <?php

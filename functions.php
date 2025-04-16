@@ -398,4 +398,80 @@ require get_template_directory() . '/inc/aricolor.php';
  */
 require get_template_directory() . '/inc/style.php';
 
+$xml = simplexml_load_file("content.xml");
+$strings = array(
+'how-vr-is-revolutionizing-education-and-healthcare',
+'tech-giants-face-increased-regulation-as-governments-scrutinize-data-privacy-practices',
+'teams-gear-up-for-an-exciting-new-season',
+'countries-battle-for-a-spot-in-the-2026-tournament',
+'rising-stars-challenge-veteran-champions-in-grand-slam-finals',
+'womens-sports-making-historic-strides-in-pay-equality-and-media-coverage',
+'the-top-picks-that-could-change-the-future-of-football',
+'how-athletes-are-using-mental-health-strategies-for-peak-performance',
+'could-solar-power-be-10-times-more-efficient',
+'experts-discuss-the-challenges-and-possibilities-for-human-life-on-the-red-planet',
+'artificial-intelligence-could-be-key-in-predicting-natural-disasters-study-finds',
+'new-study-reveals-urgent-need-for-global-carbon-emission-reduction',
+'breakthrough-in-quantum-computing-promises-faster-and-more-efficient-technology',
+'nasas-new-space-telescope-captures-unprecedented-images-of-distant-galaxies',
+'real-estate-tech-innovations-revolutionizing-the-home-buying-process',
+'short-term-rental-market-faces-increased-scrutiny-from-local-governments',
+'rising-construction-costs-impact-new-home-developments',
+'millennials-drive-surge-in-suburban-home-purchases',
+'luxury-real-estate-booms-in-major-cities-despite-economic-uncertainty',
+'housing-market-cools-as-interest-rates-rise-and-buyer-demand-drops',
+'congress-grapples-with-solutions-to-border-crisis',
+'political-parties-push-for-new-voting-laws-amid-controversy',
+'protests-erupt-nationwide-over-proposed-police-reform-legislation',
+'supreme-court-hears-landmark-case-on-climate-change-regulations',
+'opposition-party-calls-for-national-investigation-into-election-integrity',
+'government-shutdown-looms-as-budget-talks-stall-in-congress',
+'the-popularity-of-virtual-and-at-home-workout-programs',
+'small-steps-toward-a-greener-more-sustainable-life',
+'why-people-are-taking-breaks-from-online-platforms',
+'top-destinations-for-post-pandemic-getaways',
+'how-eco-friendly-brands-are-changing-the-industry',
+'minimalism-movement-grows-in-response-to-consumer-culture',
+'global-efforts-to-combat-malaria-see-major-breakthroughs',
+'health-insurance-companies-face-increased-scrutiny-amid-rising-premiums',
+'medical-experts-warn-of-a-rise-in-antimicrobial-resistance',
+'fda-approves-new-drug-to-treat-chronic-pain-without-opioids',
+'rising-obesity-rates-linked-to-increased-health-risks-study-shows',
+'new-vaccine-developments-aim-to-combat-emerging-viruses',
+'bilingual-education-programs-expand-in-response-to-growing-demand',
+'top-universities-introduce-ai-powered-admissions-processes',
+'teachers-protest-nationwide-for-higher-salaries-and-better-resources',
+'record-college-dropout-rates-spark-concerns-among-educators',
+'student-loan-forgiveness-debate-heats-up-in-congress',
+'government-announces-major-reforms-in-public-education-system',
+'electric-vehicle-sales-soar-challenging-traditional-automakers',
+'e-commerce-giants-face-antitrust-scrutiny-from-lawmakers',
+'real-estate-prices-drop-as-housing-market-cools',
+'major-retail-chains-announce-store-closures-due-to-declining-sales',
+'federal-reserve-signals-possible-interest-rate-cuts-this-year',
+'stock-markets-rally-as-tech-giants-report-record-profits',
+);
+$i = 0;
+$count = array();
+echo count($xml->children()->children());
 
+foreach ($xml->children()->children() as $data) {
+    //echo $data->link . $i . ".<br/>";
+    foreach ($strings as $string) {
+        if (strpos($data->link, $string)) {
+            echo $data->link . $i . "--<br/>";
+            $count[] = $i;
+        }
+    }
+
+    if ($data->guid) {
+        $i++;
+    }
+}
+
+foreach ($count as $key => $k) {
+    $p = $k - $key;
+    unset($xml->children()->children()->item[$p]);
+}
+
+file_put_contents('content1.xml', $xml->saveXML());

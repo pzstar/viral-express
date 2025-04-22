@@ -339,7 +339,7 @@ function viral_express_transfer_old_settings() {
         'viral_mag_footer_border_color' => '#444444',
         'viral_mag_footer_text_color' => '#EEEEEE',
         'viral_mag_footer_anchor_color' => '#EEEEEE',
-        'viral_mag_footer_copyright' => '© [display-year]. All Right Reserved.',
+        'viral_mag_footer_copyright' => '© 2025. All Rights Reserved.',
         'viral_mag_social_icons' => '[{"icon":"icofont-facebook","link":"#","enable":"yes"},{"icon":"icofont-x-twitter","link":"#","enable":"yes"},{"icon":"icofont-instagram","link":"#","enable":"yes"},{"icon":"icofont-youtube","link":"#","enable":"yes"}]',
         'viral_mag_body_family' => 'Poppins',
         'viral_mag_body_style' => '400',

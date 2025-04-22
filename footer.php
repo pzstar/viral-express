@@ -12,7 +12,7 @@
 
 <?php
 $viral_express_footer_col = get_theme_mod('viral_express_footer_col', 'col-3-1-1-1');
-$viral_express_footer_copyright = get_theme_mod('viral_express_footer_copyright', esc_html__('&copy; [display-year]. All Right Reserved.', 'viral-express'));
+$viral_express_footer_copyright = get_theme_mod('viral_express_footer_copyright', esc_html__('&copy; 2025. All Rights Reserved.', 'viral-express'));
 $viral_express_footer_array = explode('-', $viral_express_footer_col);
 $count = count($viral_express_footer_array);
 $footer_col = $count - 2;

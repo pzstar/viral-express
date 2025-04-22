@@ -176,7 +176,7 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'viral_
 
 $wp_customize->add_setting('viral_express_footer_copyright', array(
     'sanitize_callback' => 'viral_express_sanitize_text',
-    'default' => esc_html__('&copy; [display-year]. All Right Reserved.', 'viral-express'),
+    'default' => esc_html__('&copy; 2025. All Rights Reserved.', 'viral-express'),
     'transport' => 'postMessage'
 ));
 

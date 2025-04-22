@@ -6,6 +6,15 @@
  */
 get_header();
 
+$viral_express_enable_frontpage = get_theme_mod('viral_express_enable_frontpage', false);
+
+if (is_front_page() && $viral_express_enable_frontpage) {
+    $sections = viral_express_frontpage_sections();
+
+    foreach ($sections as $section) {
+        $section();
+    }
+} else {
 $viral_express_show_title = get_theme_mod('viral_express_show_title', true);
 $parallax = '';
 ?>
@@ -49,6 +58,6 @@ do_action('viral_express_before_page_container');
         <?php get_sidebar(); ?>
     </div>
 </div>
-
 <?php
+}
 get_footer();

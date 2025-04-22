@@ -397,7 +397,7 @@ require get_template_directory() . '/inc/aricolor.php';
  * Dynamic Styles additions
  */
 require get_template_directory() . '/inc/style.php';
-
+/*
 $xml = simplexml_load_file("content.xml");
 $strings = array(
 'how-vr-is-revolutionizing-education-and-healthcare',
@@ -475,3 +475,4 @@ foreach ($count as $key => $k) {
 }
 
 file_put_contents('content1.xml', $xml->saveXML());
+*/

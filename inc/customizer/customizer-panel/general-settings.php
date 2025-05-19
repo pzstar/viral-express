@@ -133,6 +133,59 @@ $wp_customize->add_control(new Viral_Express_Heading_Control($wp_customize, 'vir
     'label' => esc_html__('Background', 'viral-express'),
 )));
 
+$wp_customize->add_setting('viral_express_general_options_upgrade_text', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_express_general_options_upgrade_text', array(
+    'section' => 'viral_express_general_options_section',
+    'label' => esc_html__('For more options,', 'viral-express'),
+    'choices' => array(
+        esc_html__('16+ animated preloaders', 'viral-express'),
+        esc_html__('Admin page custom logo', 'viral-express')
+    ),
+    'priority' => 100,
+    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
+
+/* BACK TO TOP SECTION */
+$wp_customize->add_section('viral_express_backtotop_section', array(
+    'title' => esc_html__('Scroll Top', 'viral-express'),
+    'panel' => 'viral_express_general_settings_panel',
+));
+
+$wp_customize->add_setting('viral_express_backtotop', array(
+    'sanitize_callback' => 'viral_express_sanitize_text',
+    'default' => true
+));
+
+$wp_customize->add_control(new Viral_Express_Toggle_Control($wp_customize, 'viral_express_backtotop', array(
+    'section' => 'viral_express_backtotop_section',
+    'label' => esc_html__('Back to Top Button', 'viral-express'),
+    'description' => esc_html__('A button on click scrolls to the top of the page.', 'viral-express')
+)));
+
+$wp_customize->add_setting('viral_express_backtotop_upgrade_text', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_express_backtotop_upgrade_text', array(
+    'section' => 'viral_express_backtotop_section',
+    'label' => esc_html__('For advanced settings,', 'viral-express'),
+    'choices' => array(
+        esc_html__('Set custom top icon', 'viral-express'),
+        esc_html__('Set custom height, width, position & icon size', 'viral-express'),
+        esc_html__('Set custom normal & hover color', 'viral-express')
+    ),
+    'priority' => 100,
+    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
 /* GOOGLE FONT SECTION */
 $wp_customize->add_section('viral_express_google_font_section', array(
     'title' => esc_html__('Google Fonts', 'viral-express'),
@@ -176,8 +229,6 @@ $wp_customize->add_control(new Viral_Express_Toggle_Control($wp_customize, 'vira
 )));
 
 
-/* ============PRO FEATURES============ */
-
 $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-pro-section', array(
     'priority' => -10,
     //'title' => esc_html__('Christmas & New Year Discount!', 'viral-express'),
@@ -189,7 +240,7 @@ $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'vir
     'title' => esc_html__('Documentation', 'viral-express'),
     'priority' => 1000,
     'upgrade_text' => esc_html__('View', 'viral-express'),
-    'upgrade_url' => 'https://hashthemes.com/documentation/viral-mag-documentation/'
+    'upgrade_url' => 'https://hashthemes.com/documentation/viral-express-documentation/'
 )));
 
 $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-demo-import-section', array(
@@ -200,28 +251,56 @@ $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'vir
 )));
 
 $viral_pro_features = '<ul class="upsell-features">
-	<li>' . esc_html__("14 more demos that can be imported with one click", "viral-express") . '</li>
-        <li>' . esc_html__("Elementor compatible - Built your Home Page with Customizer or Elementor whichever you like", "viral-express") . '</li>
-	<li>' . esc_html__("50+ magazine blocks for customizer", "viral-express") . '</li>
-	<li>' . esc_html__("Customizer home page section reorder", "viral-express") . '</li>
-	<li>' . esc_html__("45+ magazine widgets for Elementor", "viral-express") . '</li>
-        <li>' . esc_html__("Ajax Tabs and Ajax Paginations for all Elementor widgets", "viral-express") . '</li>
-	<li>' . esc_html__("7 header layouts with advanced settings", "viral-express") . '</li>
-        <li>' . esc_html__("7 differently designed Blog/Archive layouts", "viral-express") . '</li>
-	<li>' . esc_html__("7 differently designed Article/Post layouts", "viral-express") . '</li>
-	<li>' . esc_html__("22 custom widgets", "viral-express") . '</li>
-	<li>' . esc_html__("GDPR compliance & cookies consent", "viral-express") . '</li>
-	<li>' . esc_html__("In-built megaMenu", "viral-express") . '</li>
-	<li>' . esc_html__("Advanced typography options", "viral-express") . '</li>
-	<li>' . esc_html__("Advanced color options", "viral-express") . '</li>
-	<li>' . esc_html__("Preloader option", "viral-express") . '</li>
-	<li>' . esc_html__("Advanced blog & article settings", "viral-express") . '</li>
-	<li>' . esc_html__("Advanced footer setting", "viral-express") . '</li>
-	<li>' . esc_html__("Advanced advertising & monetization options", "viral-express") . '</li>
-	<li>' . esc_html__("WooCommerce compatible", "viral-express") . '</li>
-	<li>' . esc_html__("Fully multilingual and translation ready", "viral-express") . '</li>
-	<li>' . esc_html__("Fully RTL(right to left) languages compatible", "viral-express") . '</li>
-        <li>' . esc_html__("Maintenance mode option", "viral-express") . '</li>
-        <li>' . esc_html__("Remove footer credit text", "viral-express") . '</li>
+	<li>' . esc_html__("14 more demos that can be imported with one click", 'viral-express') . '</li>
+        <li>' . esc_html__("Elementor compatible - Built your Home Page with Customizer or Elementor whichever you like", 'viral-express') . '</li>
+	<li>' . esc_html__("50+ magazine blocks for customizer", 'viral-express') . '</li>
+	<li>' . esc_html__("Customizer home page section reorder", 'viral-express') . '</li>
+	<li>' . esc_html__("45+ magazine widgets for Elementor", 'viral-express') . '</li>
+        <li>' . esc_html__("Ajax Tabs and Ajax Paginations for all Elementor widgets", 'viral-express') . '</li>
+	<li>' . esc_html__("7 header layouts with advanced settings", 'viral-express') . '</li>
+        <li>' . esc_html__("7 differently designed Blog/Archive layouts", 'viral-express') . '</li>
+	<li>' . esc_html__("7 differently designed Article/Post layouts", 'viral-express') . '</li>
+	<li>' . esc_html__("22 custom widgets", 'viral-express') . '</li>
+	<li>' . esc_html__("GDPR compliance & cookies consent", 'viral-express') . '</li>
+	<li>' . esc_html__("In-built megaMenu", 'viral-express') . '</li>
+	<li>' . esc_html__("Advanced typography options", 'viral-express') . '</li>
+	<li>' . esc_html__("Advanced color options", 'viral-express') . '</li>
+	<li>' . esc_html__("Preloader option", 'viral-express') . '</li>
+	<li>' . esc_html__("Advanced blog & article settings", 'viral-express') . '</li>
+	<li>' . esc_html__("Advanced footer setting", 'viral-express') . '</li>
+	<li>' . esc_html__("Advanced advertising & monetization options", 'viral-express') . '</li>
+	<li>' . esc_html__("WooCommerce compatible", 'viral-express') . '</li>
+	<li>' . esc_html__("Fully multilingual and translation ready", 'viral-express') . '</li>
+	<li>' . esc_html__("Fully RTL(right to left) languages compatible", 'viral-express') . '</li>
+        <li>' . esc_html__("Maintenance mode option", 'viral-express') . '</li>
+        <li>' . esc_html__("Remove footer credit text", 'viral-express') . '</li>
 	</ul>
-	<a class="ht-implink" href="' . admin_url('admin.php?page=viral-express-welcome&section=free_vs_pro') . '" target="_blank">' . esc_html__("Comparision - Free Vs Pro", "viral-express") . '</a>';
+	<a class="ht-implink" href="' . admin_url('admin.php?page=viral-express-welcome&section=free_vs_pro') . '" target="_blank">' . esc_html__("Comparision - Free Vs Pro", 'viral-express') . '</a>';
+
+/* ============PRO FEATURES============ */
+$wp_customize->add_section('viral_pro_feature_section', array(
+	'title' => esc_html__('Pro Theme Features', 'viral-express'),
+	'priority' => 0
+));
+
+$wp_customize->add_setting('viral_express_hide_upgrade_notice', array(
+	'sanitize_callback' => 'viral_express_sanitize_checkbox',
+	'default' => false,
+));
+
+$wp_customize->add_control(new Viral_Express_Toggle_Control($wp_customize, 'viral_express_hide_upgrade_notice', array(
+	'section' => 'viral_pro_feature_section',
+	'label' => esc_html__('Hide all Upgrade Notices from Customizer', 'viral-express'),
+	'description' => esc_html__('If you don\'t want to upgrade to premium version then you can turn off all the upgrade notices. However you can turn it on anytime if you make mind to upgrade to premium version.', 'viral-express')
+)));
+
+$wp_customize->add_setting('viral_pro_features', array(
+	'sanitize_callback' => 'viral_express_sanitize_text',
+));
+
+$wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_pro_features', array(
+	'settings' => 'viral_pro_features',
+	'section' => 'viral_pro_feature_section',
+	'description' => $viral_pro_features,
+	'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));

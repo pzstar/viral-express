@@ -157,3 +157,20 @@ $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'viral_
     'section' => 'viral_express_layout_options_section',
     'label' => esc_html__('Sidebar Widget Title Color', 'viral-express')
 )));
+
+$wp_customize->add_setting('viral_express_sidebar_upgrade_text', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_express_sidebar_upgrade_text', array(
+    'section' => 'viral_express_layout_options_section',
+    'label' => esc_html__('For more options,', 'viral-express'),
+    'choices' => array(
+        esc_html__('8 sidebar styles', 'viral-express'),
+        esc_html__('20+ widgets/blocks for sidebar', 'viral-express'),
+    ),
+    'priority' => 100,
+    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));

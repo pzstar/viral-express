@@ -320,6 +320,11 @@ function viral_express_check_cfu() {
     }
 }
 
+function viral_express_is_upgrade_notice_active() {
+    $show_upgrade_notice = apply_filters('viral_express_hide_upgrade_notice', get_theme_mod('viral_express_hide_upgrade_notice', false));
+    return !$show_upgrade_notice;
+}
+
 function viral_express_check_frontpage() {
     $show_on_front = get_option('show_on_front');
     $enable_frontpage = get_theme_mod('viral_express_enable_frontpage', false);

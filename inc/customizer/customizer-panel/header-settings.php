@@ -133,6 +133,24 @@ $wp_customize->add_control(new Viral_Express_Range_Slider_Control($wp_customize,
     )
 )));
 
+$wp_customize->add_setting('viral_express_title_tagline_upgrade_text', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_express_title_tagline_upgrade_text', array(
+    'section' => 'title_tagline',
+    'label' => esc_html__('For more options,', 'viral-express'),
+    'choices' => array(
+        esc_html__('Set typography for title & tagline individually', 'viral-express'),
+        esc_html__('Set color for title & tagline individually', 'viral-express'),
+    ),
+    'priority' => 100,
+    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
+
 
 //TOP HEADER
 $wp_customize->add_section('viral_express_top_header_options', array(
@@ -352,6 +370,19 @@ $wp_customize->add_control(new Viral_Express_Editor_Control($wp_customize, 'vira
     'include_admin_print_footer' => true
 )));
 
+$wp_customize->add_setting('viral_express_th_upgrade_text', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_express_th_upgrade_text', array(
+    'section' => 'viral_express_top_header_options',
+    'label' => esc_html__('For more settings,', 'viral-express'),
+    'priority' => 100,
+    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
 
 //MAIN HEADER
 $wp_customize->add_section('viral_express_main_header_options', array(
@@ -556,6 +587,23 @@ $wp_customize->add_setting('viral_express_mh_border_color', array(
 $wp_customize->add_control(new Viral_Express_Alpha_Color_Control($wp_customize, 'viral_express_mh_border_color', array(
     'label' => esc_html__('Border Color', 'viral-express'),
     'section' => 'viral_express_main_header_options'
+)));
+
+$wp_customize->add_setting('viral_express_mh_upgrade_text', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_express_mh_upgrade_text', array(
+    'section' => 'viral_express_main_header_options',
+    'label' => esc_html__('For more options,', 'viral-express'),
+    'choices' => array(
+        esc_html__('7 header layouts', 'viral-express'),
+        esc_html__('More advanced options', 'viral-express')
+    ),
+    'priority' => 100,
+    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
 
 //MENU SETTINGS
@@ -801,6 +849,24 @@ $wp_customize->add_control(new Viral_Express_Typography_Control($wp_customize, '
         'max' => 40,
         'step' => 1
     )
+)));
+
+$wp_customize->add_setting('viral_express_menu_upgrade_text', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_express_menu_upgrade_text', array(
+    'section' => 'viral_express_menu_section',
+    'label' => esc_html__('For more options,', 'viral-express'),
+    'choices' => array(
+        esc_html__('10 menu hover styles', 'viral-express'),
+        esc_html__('Differently designed call to action button at the end of the menu', 'viral-express'),
+        esc_html__('More advanced options', 'viral-express')
+    ),
+    'priority' => 100,
+    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
 
 //TITLE BAR SETTINGS

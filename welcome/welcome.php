@@ -1,7 +1,7 @@
 <?php
-if (!class_exists('Viral_Mag_Welcome')):
+if (!class_exists('Viral_Express_Welcome')):
 
-    class Viral_Mag_Welcome {
+    class Viral_Express_Welcome {
         public $theme_name = ''; // For storing Theme Name
         public $theme_version = ''; // For Storing Theme Current Version Information
         public $free_plugins = array(); // For Storing the list of the Recommended Free Plugins
@@ -413,6 +413,6 @@ if (!class_exists('Viral_Mag_Welcome')):
 
     }
 
-    new Viral_Mag_Welcome();
+    new Viral_Express_Welcome();
 
 endif;

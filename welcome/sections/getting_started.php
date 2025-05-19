@@ -1,12 +1,18 @@
 <div class="welcome-getting-started">
     <div class="welcome-manual-setup">
         <h3><?php echo esc_html__('Manual Setup', 'viral-express'); ?></h3>
+        <p><?php echo esc_html__('You can setup the home page sections either from Customizer Panel or from Elementor Pagebuilder', 'viral-express'); ?></p>
+        <p><strong><?php echo esc_html__('FROM CUSTOMIZER', 'viral-express'); ?></strong></p>
         <ol>
-            <li><?php printf(esc_html__('Install and activate "Elementor" and "Hash Elements" plugin from %s.', 'viral-express'), '<a href="' . admin_url('admin.php?page=viral-express-welcome&section=recommended_plugins') . '" target="_blank">' . esc_html__('Recommended Plugin page', 'viral-express') . '</a>'); ?></li><br />
-            <li><?php echo esc_html__('Create a new page with Page Template as "Elementor Full Width" in the right sidebar and save it.', 'viral-express'); ?></li><br />
-            <li><?php echo esc_html__('Now edit the page with Elementor. Drag and drop the news elements in the Elementor to create your own design.', 'viral-express'); ?></li><br />
-            <li><?php echo esc_html__('Now go to Appearance > Customize > Homepage Settings and choose "A static page" for "Your latest posts" and select the created page for "Home Page" option.', 'viral-express'); ?> </li><br />
-            <li><?php echo esc_html__('Go to Appearance > Customzer to customizer the header, footer and various theme settings.', 'viral-express'); ?> </li><br />
+            <li><?php echo esc_html__('Go to Appearance > Customize', 'viral-express'); ?></li>
+            <li><?php echo sprintf(esc_html__('Click on "%s" and turn on the option for "Enable FrontPage" Setting', 'viral-express'), '<a href="' . admin_url('customize.php?autofocus[section]=static_front_page') . '" target="_blank">' . esc_html__('Homepage Settings', 'viral-express') . '</a>'); ?> </li>
+            <li><?php echo esc_html__('Now go back and click on "Front Page Sections" and set up the FrontPage Section', 'viral-express'); ?> </li>
+        </ol>
+        <p><strong><?php echo esc_html__('FROM ELEMENTOR', 'viral-express'); ?></strong></p>
+        <ol>
+            <li><?php printf(esc_html__('Firstly install and activate "Elementor" and "Hash Elements" plugin from %s.', 'viral-express'), '<a href="' . admin_url('admin.php?page=viral-welcome&section=recommended_plugins') . '" target="_blank">' . esc_html__('Recommended Plugin page', 'viral-express') . '</a>'); ?></li>
+            <li><?php echo esc_html__('Create a new page and edit with Elementor. Drag and drop the news elements in the Elementor to create your own design.', 'viral-express'); ?></li>
+            <li><?php echo esc_html__('Now go to Appearance > Customize > Homepage Settings and choose "A static page" for "Your latest posts" and select the created page for "Home Page" option.', 'viral-express'); ?> </li>
         </ol>
         <p style="margin-bottom: 0"><?php printf(esc_html__('For detailed documentation, please visit %s.', 'viral-express'), '<a href="https://hashthemes.com/documentation/viral-express-documentation/#HomePageSetup" target="_blank">' . esc_html__('Documentation Page', 'viral-express') . '</a>'); ?></p>
     </div>

@@ -280,7 +280,7 @@ $viral_pro_features = '<ul class="upsell-features">
 /* ============PRO FEATURES============ */
 $wp_customize->add_section('viral_pro_feature_section', array(
 	'title' => esc_html__('Pro Theme Features', 'viral-express'),
-	'priority' => 0
+	'priority' => -1
 ));
 
 $wp_customize->add_setting('viral_express_hide_upgrade_notice', array(

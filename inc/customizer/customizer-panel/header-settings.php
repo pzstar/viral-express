@@ -377,6 +377,11 @@ $wp_customize->add_setting('viral_express_th_upgrade_text', array(
 $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_express_th_upgrade_text', array(
     'section' => 'viral_express_top_header_options',
     'label' => esc_html__('For more settings,', 'viral-express'),
+    'choices' => array(
+        esc_html__('Display Date/time in top header', 'viral-express'),
+        esc_html__('Display Ticker in top header', 'viral-express'),
+        esc_html__('Display Custom Widgets in top header', 'viral-express'),
+    ),
     'priority' => 100,
     'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
     'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',

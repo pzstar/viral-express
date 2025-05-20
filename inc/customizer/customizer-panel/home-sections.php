@@ -1496,3 +1496,29 @@ foreach ($home_sections as $home_section) {
         'container_inclusive' => true
     ));
 }
+
+$wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-upgrade-section', array(
+    'title' => esc_html__('More Sections on Premium', 'viral-express'),
+    'panel' => 'viral_express_front_page_panel',
+    'priority' => 1000,
+    'class' => 'ht--boxed',
+    'options' => array(
+        esc_html__('- With More Styles for all Modules', 'viral-express'),
+        esc_html__('- Ticker Module', 'viral-express'),
+        esc_html__('- Featured Image Module', 'viral-express'),
+        esc_html__('- Tile News Module', 'viral-express'),
+        esc_html__('- News Module - Fullwidth', 'viral-express'),
+        esc_html__('- Carousel Module - Fullwidth', 'viral-express'),
+        esc_html__('- Three Column Module', 'viral-express'),
+        esc_html__('- Video Module', 'viral-express'),
+        esc_html__('- Multiple Similar Module', 'viral-express'),
+        esc_html__('------------------------', 'viral-express'),
+        esc_html__('- Option to display advertisment between sections', 'viral-express'),
+        esc_html__('- Option to set gradient & video background on each sections', 'viral-express'),
+        esc_html__('- Option to set different shaped separator at top & bottom of the sections', 'viral-express'),
+        esc_html__('- Elementor Pagebuilder Compatible. All the above sections can be created with Elementor Page Builder or Customizer whichever you like.', 'viral-express'),
+    ),
+    'active_callback' => 'viral_express_is_upgrade_notice_active',
+    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-express/?utm_source=wordpress&utm_medium=viral-express-customizer-button&utm_campaign=viral-express-upgrade',
+)));

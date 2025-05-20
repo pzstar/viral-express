@@ -168,6 +168,7 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     'choices' => array(
         esc_html__('8 sidebar styles', 'viral-express'),
         esc_html__('20+ widgets/blocks for sidebar', 'viral-express'),
+        esc_html__('Custom typography for sidebar', 'viral-express'),
     ),
     'priority' => 100,
     'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),

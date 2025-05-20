@@ -23,7 +23,7 @@ if (!class_exists('Viral_Express_Register_Customizer_Controls')) {
             require VIRAL_EXPRESS_CUSTOMIZER_PATH . 'customizer-panel/social-settings.php';
             require VIRAL_EXPRESS_CUSTOMIZER_PATH . 'customizer-panel/typography.php';
 
-            $wp_customize->get_section('static_front_page')->priority = -1;
+            $wp_customize->get_section('static_front_page')->priority = 0;
 
             $wp_customize->add_setting('viral_express_enable_frontpage', array(
                 'sanitize_callback' => 'viral_express_sanitize_text',

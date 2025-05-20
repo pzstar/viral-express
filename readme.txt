@@ -5,7 +5,7 @@ Viral Express is distributed under the terms of the GNU GPL (http://www.gnu.org/
 Contributors: hashthemes
 Requires at least: 6.3
 Tested up to: 6.7
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -18,6 +18,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 1.0.5 - May 20 2025 =
+* pot file added for translation
+* Update option added in customizer
+
 = 1.0.3 - Apr 22 2025 =
 * Notice: Function loadtextdomain_just_in_time was called incorrectly - Fixed
 

@@ -239,3 +239,22 @@ $wp_customize->add_control(new Viral_Express_Typography_Control($wp_customize, '
         'step' => 1
     )
 )));
+
+$wp_customize->add_setting('viral_express_home_settings_text', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_express_sidebar_upgrade_text', array(
+    'section' => 'viral_express_frontpage_settings',
+    'label' => esc_html__('For more options,', 'viral-express'),
+    'choices' => array(
+        esc_html__('12 page block title styles', 'viral-express'),
+        esc_html__('10 image hover style for post thumb', 'viral-express'),
+        esc_html__('Lazy loading images', 'viral-express'),
+        esc_html__('Option to upload custom placeholder image', 'viral-express'),
+    ),
+    'priority' => 100,
+    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));

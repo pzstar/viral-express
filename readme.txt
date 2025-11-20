@@ -4,8 +4,8 @@ Viral Express is distributed under the terms of the GNU GPL (http://www.gnu.org/
 
 Contributors: hashthemes
 Requires at least: 6.3
-Tested up to: 6.7
-Stable tag: 1.0.5
+Tested up to: 6.8
+Stable tag: 1.0.6
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -18,6 +18,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 1.0.6 - Nov 20 2025 =
+* Black Friday discount banner added on welcome page
+
 = 1.0.5 - May 20 2025 =
 * pot file added for translation
 * Update option added in customizer

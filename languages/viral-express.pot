@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Viral Express\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-20 07:18+0000\n"
+"POT-Creation-Date: 2025-11-20 12:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -686,6 +686,10 @@ msgstr ""
 
 #: inc/widgets/widget-post-list-category.php:116
 msgid "Big Thumbnail With Title Over Image"
+msgstr ""
+
+#: inc/customizer/customizer-panel/general-settings.php:234
+msgid "Black Friday & Cyber Monday Discount!"
 msgstr ""
 
 #: inc/customizer/customizer-panel/home-sections.php:1345
@@ -3142,7 +3146,6 @@ msgstr ""
 #: welcome/sections/free_vs_pro.php:21 welcome/sections/free_vs_pro.php:388
 #: inc/customizer/customizer-panel/general-settings.php:148
 #: inc/customizer/customizer-panel/general-settings.php:184
-#: inc/customizer/customizer-panel/general-settings.php:235
 #: inc/customizer/customizer-panel/sidebar-settings.php:174
 #: inc/customizer/customizer-panel/home-sections.php:1522
 #: inc/customizer/customizer-panel/home-settings.php:257
@@ -3155,6 +3158,10 @@ msgstr ""
 #: inc/customizer/customizer-panel/header-settings.php:609
 #: inc/customizer/customizer-panel/header-settings.php:872
 msgid "Upgrade to Pro"
+msgstr ""
+
+#: inc/customizer/customizer-panel/general-settings.php:235
+msgid "Upgrade to Pro (40% OFF)"
 msgstr ""
 
 #: welcome/sections/free_vs_pro.php:22 welcome/sections/free_vs_pro.php:389

@@ -231,8 +231,8 @@ $wp_customize->add_control(new Viral_Express_Toggle_Control($wp_customize, 'vira
 
 $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-pro-section', array(
     'priority' => -10,
-    //'title' => esc_html__('Christmas & New Year Discount!', 'viral-express'),
-    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'title' => esc_html__('Black Friday & Cyber Monday Discount!', 'viral-express'),
+    'upgrade_text' => esc_html__('Upgrade to Pro (40% OFF)', 'viral-express'),
     'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-customizer-button&utm_campaign=viral-express-upgrade'
 )));
 
@@ -279,28 +279,28 @@ $viral_pro_features = '<ul class="upsell-features">
 
 /* ============PRO FEATURES============ */
 $wp_customize->add_section('viral_pro_feature_section', array(
-	'title' => esc_html__('Pro Theme Features', 'viral-express'),
-	'priority' => -1
+    'title' => esc_html__('Pro Theme Features', 'viral-express'),
+    'priority' => -1
 ));
 
 $wp_customize->add_setting('viral_express_hide_upgrade_notice', array(
-	'sanitize_callback' => 'viral_express_sanitize_checkbox',
-	'default' => false,
+    'sanitize_callback' => 'viral_express_sanitize_checkbox',
+    'default' => false,
 ));
 
 $wp_customize->add_control(new Viral_Express_Toggle_Control($wp_customize, 'viral_express_hide_upgrade_notice', array(
-	'section' => 'viral_pro_feature_section',
-	'label' => esc_html__('Hide all Upgrade Notices from Customizer', 'viral-express'),
-	'description' => esc_html__('If you don\'t want to upgrade to premium version then you can turn off all the upgrade notices. However you can turn it on anytime if you make mind to upgrade to premium version.', 'viral-express')
+    'section' => 'viral_pro_feature_section',
+    'label' => esc_html__('Hide all Upgrade Notices from Customizer', 'viral-express'),
+    'description' => esc_html__('If you don\'t want to upgrade to premium version then you can turn off all the upgrade notices. However you can turn it on anytime if you make mind to upgrade to premium version.', 'viral-express')
 )));
 
 $wp_customize->add_setting('viral_pro_features', array(
-	'sanitize_callback' => 'viral_express_sanitize_text',
+    'sanitize_callback' => 'viral_express_sanitize_text',
 ));
 
 $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_pro_features', array(
-	'settings' => 'viral_pro_features',
-	'section' => 'viral_pro_feature_section',
-	'description' => $viral_pro_features,
-	'active_callback' => 'viral_express_is_upgrade_notice_active'
+    'settings' => 'viral_pro_features',
+    'section' => 'viral_pro_feature_section',
+    'description' => $viral_pro_features,
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));

@@ -231,8 +231,8 @@ $wp_customize->add_control(new Viral_Express_Toggle_Control($wp_customize, 'vira
 
 $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-pro-section', array(
     'priority' => -10,
-    'title' => esc_html__('Black Friday & Cyber Monday Discount!', 'viral-express'),
-    'upgrade_text' => esc_html__('Upgrade to Pro (40% OFF)', 'viral-express'),
+    //'title' => esc_html__('Black Friday & Cyber Monday Discount!', 'viral-express'),
+    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
     'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-customizer-button&utm_campaign=viral-express-upgrade'
 )));
 

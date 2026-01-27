@@ -163,7 +163,7 @@ $wp_customize->add_setting('viral_express_top_header_nav', array(
     'sanitize_callback' => 'wp_kses_post',
 ));
 
-$wp_customize->add_control(new Viral_express_Tab_Control($wp_customize, 'viral_express_top_header_nav', array(
+$wp_customize->add_control(new Viral_Express_Tab_Control($wp_customize, 'viral_express_top_header_nav', array(
     'section' => 'viral_express_top_header_options',
     'priority' => 1,
     'buttons' => array(

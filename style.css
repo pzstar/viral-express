@@ -6444,11 +6444,12 @@ body.ht-no-footer-space #ht-colophon {
 }
 
 .ht-search-close button{
-    background: none;
+    background: transparent !important;
     font-size: inherit;
     height: auto;
     min-height: auto;
     padding: 0;
+    color: inherit;
 }
 
 .ht-search-container {

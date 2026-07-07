@@ -239,6 +239,7 @@ $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'vir
 $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-doc-section', array(
     'title' => esc_html__('Documentation', 'viral-express'),
     'priority' => 1000,
+    'class' => 'ht--single-row',
     'upgrade_text' => esc_html__('View', 'viral-express'),
     'upgrade_url' => 'https://hashthemes.com/documentation/viral-express-documentation/'
 )));
@@ -246,6 +247,7 @@ $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'vir
 $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-demo-import-section', array(
     'title' => esc_html__('Import Demo Content', 'viral-express'),
     'priority' => 999,
+    'class' => 'ht--single-row',
     'upgrade_text' => esc_html__('Import', 'viral-express'),
     'upgrade_url' => admin_url('admin.php?page=viral-express-welcome')
 )));
@@ -275,7 +277,7 @@ $viral_pro_features = '<ul class="upsell-features">
         <li>' . esc_html__("Maintenance mode option", 'viral-express') . '</li>
         <li>' . esc_html__("Remove footer credit text", 'viral-express') . '</li>
 	</ul>
-	<a class="ht-implink" href="' . admin_url('admin.php?page=viral-express-welcome&section=free_vs_pro') . '" target="_blank">' . esc_html__("Comparision - Free Vs Pro", 'viral-express') . '</a>';
+	<a class="ht-implink button button-primary" href="' . admin_url('admin.php?page=viral-express-welcome&section=free_vs_pro') . '" target="_blank">' . esc_html__("Comparision - Free Vs Pro", 'viral-express') . '</a>';
 
 /* ============PRO FEATURES============ */
 $wp_customize->add_section('viral_pro_feature_section', array(

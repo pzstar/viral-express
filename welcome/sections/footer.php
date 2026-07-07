@@ -234,5 +234,5 @@
         <p><?php echo esc_html__('Try the Premium version and check if it fits your need or not. If not, we have 7 days money-back guarantee.', 'viral-express'); ?></p>
     </div>
 
-    <a class="upgrade-button" href="https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-footer&utm_campaign=viral-express-upgrade" target="_blank"><?php esc_html_e('Upgrade Now', 'viral-express'); ?></a>
+    <a class="upgrade-button button button-primary" href="https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-footer&utm_campaign=viral-express-upgrade" target="_blank"><?php esc_html_e('Upgrade Now', 'viral-express'); ?></a>
 </div>

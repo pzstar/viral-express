@@ -36,22 +36,6 @@ class Viral_Express_Icon_Manager {
                 'displayPrefix' => '',
                 'url' => '',
                 'icons' => $this->materialdesignicons_array(),
-            ),
-            'viral-express-essential-icon' => array(
-                'name' => 'viral-express-essential-icon',
-                'label' => esc_html__('Essential Icons', 'viral-express'),
-                'prefix' => 'essential-icon-',
-                'displayPrefix' => '',
-                'url' => '',
-                'icons' => $this->essential_icon_array(),
-            ),
-            'viral-express-elegant-icon' => array(
-                'name' => 'viral-express-elegant-icon',
-                'label' => esc_html__('Elegant Icons', 'viral-express'),
-                'prefix' => '',
-                'displayPrefix' => '',
-                'url' => '',
-                'icons' => $this->eleganticons_array(),
             )
         );
 

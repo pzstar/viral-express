@@ -4,8 +4,8 @@ Viral Express is distributed under the terms of the GNU GPL (http://www.gnu.org/
 
 Contributors: hashthemes
 Requires at least: 6.3
-Tested up to: 6.9
-Stable tag: 1.1.0
+Tested up to: 7.0
+Stable tag: 1.1.1
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -18,6 +18,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 1.1.1 - Jul 8 2026 =
+* Compatibility fixes with WordPress 7.0
+* Desing fixes
+
 = 1.1.0 - Apr 1 2026 =
 * New Premium Demo added
 

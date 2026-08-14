@@ -200,6 +200,6 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     ),
     'priority' => 100,
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
-    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
+    'upgrade_url' => viral_express_upgrade_url('footer', 'viral-express-customizer'),
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));

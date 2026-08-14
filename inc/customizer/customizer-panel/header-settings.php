@@ -146,7 +146,7 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     ),
     'priority' => 100,
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
-    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
+    'upgrade_url' => viral_express_upgrade_url('logo-favicon', 'viral-express-customizer'),
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
 
@@ -384,7 +384,7 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     ),
     'priority' => 100,
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
-    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
+    'upgrade_url' => viral_express_upgrade_url('top-header', 'viral-express-customizer'),
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
 
@@ -594,6 +594,30 @@ $wp_customize->add_control(new Viral_Express_Alpha_Color_Control($wp_customize, 
     'section' => 'viral_express_main_header_options'
 )));
 
+$wp_customize->add_setting('viral_express_main_header_preview', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Pro_Preview_Control($wp_customize, 'viral_express_main_header_preview', array(
+    'section' => 'viral_express_main_header_options',
+    'priority' => 99,
+    'label' => esc_html__('7 header layouts in Viral Pro', 'viral-express'),
+    'columns' => 2,
+    'images' => array(
+        'headers/header-1.png',
+        'headers/header-2.png',
+        'headers/header-3.png',
+        'headers/header-4.png',
+        'headers/header-5.png',
+        'headers/header-6.png',
+        'headers/header-7.png'
+    ),
+    'more_count' => 0,
+    'upgrade_text' => esc_html__('Unlock these layouts', 'viral-express'),
+    'upgrade_url' => viral_express_upgrade_url('preview-header', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
 $wp_customize->add_setting('viral_express_mh_upgrade_text', array(
     'sanitize_callback' => 'viral_express_sanitize_text'
 ));
@@ -607,7 +631,7 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     ),
     'priority' => 100,
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
-    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
+    'upgrade_url' => viral_express_upgrade_url('main-header', 'viral-express-customizer'),
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
 
@@ -870,7 +894,7 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     ),
     'priority' => 100,
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
-    'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
+    'upgrade_url' => viral_express_upgrade_url('menu', 'viral-express-customizer'),
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
 

@@ -1519,6 +1519,6 @@ $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'vir
         esc_html__('- Elementor Pagebuilder Compatible. All the above sections can be created with Elementor Page Builder or Customizer whichever you like.', 'viral-express'),
     ),
     'active_callback' => 'viral_express_is_upgrade_notice_active',
-    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
     'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-express/?utm_source=wordpress&utm_medium=viral-express-customizer-button&utm_campaign=viral-express-upgrade',
 )));

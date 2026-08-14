@@ -145,7 +145,7 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
         esc_html__('Set color for title & tagline individually', 'viral-express'),
     ),
     'priority' => 100,
-    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
     'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
@@ -383,7 +383,7 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
         esc_html__('Display Custom Widgets in top header', 'viral-express'),
     ),
     'priority' => 100,
-    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
     'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
@@ -606,7 +606,7 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
         esc_html__('More advanced options', 'viral-express')
     ),
     'priority' => 100,
-    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
     'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
@@ -869,7 +869,7 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
         esc_html__('More advanced options', 'viral-express')
     ),
     'priority' => 100,
-    'upgrade_text' => esc_html__('Upgrade to Pro', 'viral-express'),
+    'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
     'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-pro/?utm_source=wordpress&utm_medium=viral-express-link&utm_campaign=viral-express-upgrade',
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));

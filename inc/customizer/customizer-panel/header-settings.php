@@ -141,8 +141,7 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     'section' => 'title_tagline',
     'label' => esc_html__('For more options,', 'viral-express'),
     'choices' => array(
-        esc_html__('Set typography for title & tagline individually', 'viral-express'),
-        esc_html__('Set color for title & tagline individually', 'viral-express'),
+        esc_html__('Set typography for title & tagline individually', 'viral-express')
     ),
     'priority' => 100,
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
@@ -380,7 +379,7 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     'choices' => array(
         esc_html__('Display Date/time in top header', 'viral-express'),
         esc_html__('Display Ticker in top header', 'viral-express'),
-        esc_html__('Display Custom Widgets in top header', 'viral-express'),
+        esc_html__('Display Custom Widgets in top header', 'viral-express')
     ),
     'priority' => 100,
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),

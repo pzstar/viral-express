@@ -6,6 +6,14 @@
  * @package Viral Express
  */
 /* ============FRONT PAGE PANEL============ */
+/* Shared Pro block-style thumbnails, reused by every front page preview. */
+$viral_express_pro_block_images = array(
+    'news/style1.png', 'news/style2.png', 'news/style3.png',
+    'tile/style1.png', 'tile/style2.png', 'tile/style3.png',
+    'slider/style1.png', 'slider/style2.png',
+    'carousel/style1.png', 'ticker/style1.png', 'ticker/style2.png'
+);
+
 $wp_customize->add_panel('viral_express_front_page_panel', array(
     'title' => esc_html__('Front Page Sections', 'viral-express'),
     'description' => esc_html__('Drag and Drop to Reorder', 'viral-express') . '<img class="viral-express-drag-spinner" src="' . admin_url('/images/spinner.gif') . '">',
@@ -1521,4 +1529,86 @@ $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'vir
     'active_callback' => 'viral_express_is_upgrade_notice_active',
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
     'upgrade_url' => 'https://hashthemes.com/wordpress-theme/viral-express/?utm_source=wordpress&utm_medium=viral-express-customizer-button&utm_campaign=viral-express-upgrade',
+)));
+
+/* ============PRO PREVIEWS FOR FRONT PAGE MODULES============ */
+
+$wp_customize->add_setting('viral_express_mininews_preview', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Pro_Preview_Control($wp_customize, 'viral_express_mininews_preview', array(
+    'section' => 'viral_express_frontpage_mininews_section',
+    'priority' => 99,
+    'label' => esc_html__('More block styles in Viral Pro', 'viral-express'),
+    'columns' => 3,
+    'images' => $viral_express_pro_block_images,
+    'more_count' => 38,
+    'upgrade_text' => esc_html__('Unlock these layouts', 'viral-express'),
+    'upgrade_url' => viral_express_upgrade_url('preview-home-mininews', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
+$wp_customize->add_setting('viral_express_slider1_preview', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Pro_Preview_Control($wp_customize, 'viral_express_slider1_preview', array(
+    'section' => 'viral_express_frontpage_slider1_section',
+    'priority' => 99,
+    'label' => esc_html__('More block styles in Viral Pro', 'viral-express'),
+    'columns' => 3,
+    'images' => $viral_express_pro_block_images,
+    'more_count' => 38,
+    'upgrade_text' => esc_html__('Unlock these layouts', 'viral-express'),
+    'upgrade_url' => viral_express_upgrade_url('preview-home-slider', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
+$wp_customize->add_setting('viral_express_leftnews_preview', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Pro_Preview_Control($wp_customize, 'viral_express_leftnews_preview', array(
+    'section' => 'viral_express_frontpage_leftnews_section',
+    'priority' => 99,
+    'label' => esc_html__('More block styles in Viral Pro', 'viral-express'),
+    'columns' => 3,
+    'images' => $viral_express_pro_block_images,
+    'more_count' => 38,
+    'upgrade_text' => esc_html__('Unlock these layouts', 'viral-express'),
+    'upgrade_url' => viral_express_upgrade_url('preview-home-leftnews', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
+$wp_customize->add_setting('viral_express_rightnews_preview', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Pro_Preview_Control($wp_customize, 'viral_express_rightnews_preview', array(
+    'section' => 'viral_express_frontpage_rightnews_section',
+    'priority' => 99,
+    'label' => esc_html__('More block styles in Viral Pro', 'viral-express'),
+    'columns' => 3,
+    'images' => $viral_express_pro_block_images,
+    'more_count' => 38,
+    'upgrade_text' => esc_html__('Unlock these layouts', 'viral-express'),
+    'upgrade_url' => viral_express_upgrade_url('preview-home-rightnews', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
+$wp_customize->add_setting('viral_express_carousel1_preview', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Pro_Preview_Control($wp_customize, 'viral_express_carousel1_preview', array(
+    'section' => 'viral_express_frontpage_carousel1_section',
+    'priority' => 99,
+    'label' => esc_html__('More block styles in Viral Pro', 'viral-express'),
+    'columns' => 3,
+    'images' => $viral_express_pro_block_images,
+    'more_count' => 38,
+    'upgrade_text' => esc_html__('Unlock these layouts', 'viral-express'),
+    'upgrade_url' => viral_express_upgrade_url('preview-home-carousel', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));

@@ -270,3 +270,24 @@ $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'vir
     'upgrade_url' => 'https://hashthemes.com/downloads/hash-custom-font-uploader/',
     'active_callback' => 'viral_express_check_cfu'
 )));
+
+/* ============CONTEXTUAL UPSELLS============ */
+
+$wp_customize->add_setting('viral_express_typography_upgrade_text', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_express_typography_upgrade_text', array(
+    'section' => 'body_typography',
+    'label' => esc_html__('For more fonts and settings,', 'viral-express'),
+    'choices' => array(
+        esc_html__('Separate typography for the site title and tagline', 'viral-express'),
+        esc_html__('Sidebar and widget title typography', 'viral-express'),
+        esc_html__('Table of contents title and list typography', 'viral-express')
+    ),
+    'priority' => 100,
+    'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
+    'upgrade_url' => viral_express_upgrade_url('typo-body', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+

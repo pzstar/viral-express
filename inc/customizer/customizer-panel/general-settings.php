@@ -141,7 +141,7 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     'section' => 'viral_express_general_options_section',
     'label' => esc_html__('For more options,', 'viral-express'),
     'choices' => array(
-        esc_html__('16+ animated preloaders', 'viral-express'),
+        esc_html__('16 animated preloaders, or upload your own image', 'viral-express'),
         esc_html__('Admin page custom logo', 'viral-express')
     ),
     'priority' => 100,
@@ -321,5 +321,72 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     'section' => 'viral_pro_feature_section',
     'priority' => 10,
     'description' => $viral_pro_features,
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
+/* ============CONTEXTUAL UPSELLS & PRO TEASER SECTIONS============ */
+
+$wp_customize->add_setting('viral_express_google_font_upgrade_text', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_express_google_font_upgrade_text', array(
+    'section' => 'viral_express_google_font_section',
+    'label' => esc_html__('For more font and icon control,', 'viral-express'),
+    'choices' => array(
+        esc_html__('Switch off the icon libraries you do not use - they leave the page and the icon picker', 'viral-express'),
+        esc_html__('Request only the Google font weights your site actually uses', 'viral-express'),
+        esc_html__('Preconnect to the Google font hosts for a faster first paint', 'viral-express')
+    ),
+    'priority' => 100,
+    'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
+    'upgrade_url' => viral_express_upgrade_url('google-fonts', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
+$wp_customize->add_setting('viral_express_seo_upgrade_text', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize, 'viral_express_seo_upgrade_text', array(
+    'section' => 'viral_express_seo_section',
+    'label' => esc_html__('For more SEO options,', 'viral-express'),
+    'choices' => array(
+        esc_html__('NewsArticle structured data in JSON-LD with speakable markup', 'viral-express'),
+        esc_html__('Google News sitemap so your posts get picked up faster', 'viral-express'),
+        esc_html__('Speculative loading - the next article opens instantly', 'viral-express'),
+        esc_html__('Print stylesheet for articles', 'viral-express')
+    ),
+    'priority' => 100,
+    'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
+    'upgrade_url' => viral_express_upgrade_url('seo', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
+$wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-site-tools-upgrade-section', array(
+    'title' => esc_html__('GDPR & Maintenance', 'viral-express'),
+    'panel' => 'viral_express_general_settings_panel',
+    'priority' => 1002,
+    'upgrade_text' => esc_html__('Get Pro', 'viral-express'),
+    'class' => 'ht--single-row',
+    'upgrade_url' => viral_express_upgrade_url('sec-gdpr-maintenance', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
+$wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-ads-upgrade-section', array(
+    'title' => esc_html__('Advertising & Monetization', 'viral-express'),
+    'priority' => 55,
+    'upgrade_text' => esc_html__('Get Pro', 'viral-express'),
+    'class' => 'ht--single-row',
+    'upgrade_url' => viral_express_upgrade_url('sec-advertising', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
+$wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-woocommerce-upgrade-section', array(
+    'title' => esc_html__('WooCommerce', 'viral-express'),
+    'priority' => 56,
+    'upgrade_text' => esc_html__('Get Pro', 'viral-express'),
+    'class' => 'ht--single-row',
+    'upgrade_url' => viral_express_upgrade_url('sec-woocommerce', 'viral-express-customizer'),
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));

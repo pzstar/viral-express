@@ -211,10 +211,30 @@ $wp_customize->add_control(new Viral_Express_Switch_Control($wp_customize, 'vira
 
 /* SEO SECTION */
 $wp_customize->add_section('viral_express_seo_section', array(
-    'title' => esc_html__('SEO', 'viral-express'),
+    'title' => esc_html__('SEO and Performance', 'viral-express'),
     'panel' => 'viral_express_general_settings_panel',
     'priority' => 1000
 ));
+
+$wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-preloader-upgrade-section', array(
+    'title' => esc_html__('Preloader Settings', 'viral-express'),
+    'panel' => 'viral_express_general_settings_panel',
+    'priority' => 1001,
+    'upgrade_text' => esc_html__('Get Pro', 'viral-express'),
+    'class' => 'ht--single-row ht--pro-row',
+    'upgrade_url' => viral_express_upgrade_url('sec-preloader', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
+
+$wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-toc-upgrade-section', array(
+    'title' => esc_html__('Table of Contents', 'viral-express'),
+    'panel' => 'viral_express_general_settings_panel',
+    'priority' => 1002,
+    'upgrade_text' => esc_html__('Get Pro', 'viral-express'),
+    'class' => 'ht--single-row ht--pro-row',
+    'upgrade_url' => viral_express_upgrade_url('sec-table-of-contents', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));
 
 $wp_customize->add_setting('viral_express_schema_markup', array(
     'sanitize_callback' => 'viral_express_sanitize_checkbox',
@@ -365,10 +385,9 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
 
 $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-site-tools-upgrade-section', array(
     'title' => esc_html__('GDPR & Maintenance', 'viral-express'),
-    'panel' => 'viral_express_general_settings_panel',
-    'priority' => 1002,
+    'priority' => 56,
     'upgrade_text' => esc_html__('Get Pro', 'viral-express'),
-    'class' => 'ht--single-row',
+    'class' => 'ht--single-row ht--pro-row',
     'upgrade_url' => viral_express_upgrade_url('sec-gdpr-maintenance', 'viral-express-customizer'),
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
@@ -377,16 +396,8 @@ $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'vir
     'title' => esc_html__('Advertising & Monetization', 'viral-express'),
     'priority' => 55,
     'upgrade_text' => esc_html__('Get Pro', 'viral-express'),
-    'class' => 'ht--single-row',
+    'class' => 'ht--single-row ht--pro-row',
     'upgrade_url' => viral_express_upgrade_url('sec-advertising', 'viral-express-customizer'),
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
 
-$wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-woocommerce-upgrade-section', array(
-    'title' => esc_html__('WooCommerce', 'viral-express'),
-    'priority' => 56,
-    'upgrade_text' => esc_html__('Get Pro', 'viral-express'),
-    'class' => 'ht--single-row',
-    'upgrade_url' => viral_express_upgrade_url('sec-woocommerce', 'viral-express-customizer'),
-    'active_callback' => 'viral_express_is_upgrade_notice_active'
-)));

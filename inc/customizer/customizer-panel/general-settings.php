@@ -280,8 +280,8 @@ $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'vir
 
 $viral_pro_features = '<p><strong>' . esc_html__("$69 once. No subscription, no renewal fees.", "viral-express") . '</strong><br>' . esc_html__("Use Viral Pro on unlimited websites, keep every future update free, and get support replies in 10 hours or less.", "viral-express") . '</p>
     <ul class="upsell-features">
-	<li>' . esc_html__("11 more demos that can be imported with one click", 'viral-express') . '</li>
-        <li>' . esc_html__("Elementor compatible - Built your Home Page with Customizer or Elementor whichever you like", 'viral-express') . '</li>
+	<li>' . esc_html__("17 ready-made demos that can be imported with one click", 'viral-express') . '</li>
+        <li>' . esc_html__("Elementor widgets built into the theme - no companion plugin needed", 'viral-express') . '</li>
 	<li>' . esc_html__("50+ magazine blocks for customizer", 'viral-express') . '</li>
 	<li>' . esc_html__("Customizer home page section reorder", 'viral-express') . '</li>
 	<li>' . esc_html__("45+ magazine widgets for Elementor", 'viral-express') . '</li>
@@ -306,10 +306,12 @@ $viral_pro_features = '<p><strong>' . esc_html__("$69 once. No subscription, no 
 	<li>' . esc_html__("Advanced footer setting", 'viral-express') . '</li>
 	<li>' . esc_html__("Advanced advertising & monetization options", 'viral-express') . '</li>
 	<li>' . esc_html__("WooCommerce compatible", 'viral-express') . '</li>
-	<li>' . esc_html__("Fully multilingual and translation ready", 'viral-express') . '</li>
+	<li>' . esc_html__("Polylang compatible", 'viral-express') . '</li>
 	<li>' . esc_html__("Fully RTL(right to left) languages compatible", 'viral-express') . '</li>
         <li>' . esc_html__("Maintenance mode option", 'viral-express') . '</li>
         <li>' . esc_html__("Remove footer credit text", 'viral-express') . '</li>
+	<li>' . esc_html__("Unlimited custom widget areas", "viral-express") . '</li>
+	<li>' . esc_html__("16 SVG shape dividers between front page sections", "viral-express") . '</li>
 	</ul>
 	<a class="ht-implink button button-primary" href="' . esc_url(viral_express_upgrade_url('why-upgrade-cta', 'viral-express-customizer')) . '" target="_blank">' . esc_html__("Get Viral Pro - $69", 'viral-express') . '</a>
 	<p style="text-align:center;margin:10px 0 0"><a href="' . admin_url('admin.php?page=viral-express-welcome&section=free_vs_pro') . '" target="_blank">' . esc_html__("Compare Free vs Pro", 'viral-express') . '</a></p>';

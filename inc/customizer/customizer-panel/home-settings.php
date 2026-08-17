@@ -240,19 +240,32 @@ $wp_customize->add_control(new Viral_Express_Typography_Control($wp_customize, '
     )
 )));
 
-$wp_customize->add_setting('viral_express_home_blocks_preview', array(
+$wp_customize->add_setting('viral_express_block_title_preview', array(
     'sanitize_callback' => 'viral_express_sanitize_text'
 ));
 
-$wp_customize->add_control(new Viral_Express_Pro_Preview_Control($wp_customize, 'viral_express_home_blocks_preview', array(
+$wp_customize->add_control(new Viral_Express_Pro_Preview_Control($wp_customize, 'viral_express_block_title_preview', array(
     'section' => 'viral_express_frontpage_settings',
     'priority' => 99,
-    'label' => esc_html__('More block styles in Viral Pro', 'viral-express'),
+    'label' => esc_html__('12 block title styles in Viral Pro', 'viral-express'),
     'columns' => 3,
-    'images' => $viral_express_pro_block_images,
-    'more_count' => 38,
-    'upgrade_text' => esc_html__('Unlock these layouts', 'viral-express'),
-    'upgrade_url' => viral_express_upgrade_url('preview-home', 'viral-express-customizer'),
+    'images' => array(
+        'title-bar-styles/style1.png',
+        'title-bar-styles/style2.png',
+        'title-bar-styles/style3.png',
+        'title-bar-styles/style4.png',
+        'title-bar-styles/style5.png',
+        'title-bar-styles/style6.png',
+        'title-bar-styles/style7.png',
+        'title-bar-styles/style8.png',
+        'title-bar-styles/style9.png',
+        'title-bar-styles/style10.png',
+        'title-bar-styles/style11.png',
+        'title-bar-styles/style12.png'
+    ),
+    'more_count' => 0,
+    'upgrade_text' => esc_html__('Unlock these styles', 'viral-express'),
+    'upgrade_url' => viral_express_upgrade_url('preview-block-title', 'viral-express-customizer'),
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
 

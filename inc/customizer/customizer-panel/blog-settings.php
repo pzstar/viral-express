@@ -397,3 +397,27 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     'upgrade_url' => viral_express_upgrade_url('single-post', 'viral-express-customizer'),
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
+
+$wp_customize->add_setting('viral_express_blog_layout_preview', array(
+    'sanitize_callback' => 'viral_express_sanitize_text'
+));
+
+$wp_customize->add_control(new Viral_Express_Pro_Preview_Control($wp_customize, 'viral_express_blog_layout_preview', array(
+    'section' => 'viral_express_blog_options_section',
+    'priority' => 98,
+    'label' => esc_html__('7 blog and archive layouts in Viral Pro', 'viral-express'),
+    'columns' => 3,
+    'images' => array(
+        'blog-layouts/layout1.png',
+        'blog-layouts/layout2.png',
+        'blog-layouts/layout3.png',
+        'blog-layouts/layout4.png',
+        'blog-layouts/layout5.png',
+        'blog-layouts/layout6.png',
+        'blog-layouts/layout7.png'
+    ),
+    'more_count' => 0,
+    'upgrade_text' => esc_html__('Unlock these layouts', 'viral-express'),
+    'upgrade_url' => viral_express_upgrade_url('preview-blog-layouts', 'viral-express-customizer'),
+    'active_callback' => 'viral_express_is_upgrade_notice_active'
+)));

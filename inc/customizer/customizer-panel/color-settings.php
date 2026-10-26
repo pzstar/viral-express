@@ -99,6 +99,7 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     'label' => esc_html__('For more options,', 'viral-express'),
     'choices' => array(
         esc_html__('Color Tag for each category', 'viral-express'),
+        esc_html__('Color options for the offcanvas panel and form fields', 'viral-express'),
     ),
     'priority' => 100,
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),

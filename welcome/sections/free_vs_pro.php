@@ -5,12 +5,12 @@
     </div>
 
     <div class="free-vs-pro-info">
-        <h4><?php echo esc_html_x('UNLIMITED DOMAIN LICENCE', 'Free vs Pro Content',  'viral-express'); ?></h4>
-        <p><?php echo esc_html_x('Use in as many websites as you need', 'Free vs Pro Content',  'viral-express'); ?></p>
+        <h4><?php echo esc_html_x('1 SITE OR UNLIMITED SITES', 'Free vs Pro Content',  'viral-express'); ?></h4>
+        <p><?php echo esc_html_x('1 Site License $69, Unlimited Site License $99', 'Free vs Pro Content',  'viral-express'); ?></p>
     </div>
 
     <div class="free-vs-pro-info">
-        <h4><?php echo esc_html_x('FREE UPDATES FOR LIFETIME', 'Free vs Pro Content',  'viral-express'); ?></h4>
+        <h4><?php echo esc_html_x('LIFETIME UPDATES AND SUPPORT', 'Free vs Pro Content',  'viral-express'); ?></h4>
         <p><?php echo esc_html_x('Keep up to date', 'Free vs Pro Content',  'viral-express'); ?></p>
     </div>
 </div>
@@ -19,10 +19,10 @@
     <tr>
         <td>
             <span><?php echo esc_html_x('Upgrade to Pro', 'Free vs Pro Content',  'viral-express'); ?></span>
-            <p><?php echo esc_html_x('Upgrade to Pro version for additional features and better supports.', 'Free vs Pro Content',  'viral-express'); ?></p>
+            <p><?php echo esc_html_x('Upgrade to Pro version for additional features and better support.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td colspan="2">
-            <a target="_blank" class="buy-pro-btn" href="<?php echo esc_url(viral_express_upgrade_url('freevspro-top', 'viral-express-freevspro')); ?>"><?php echo esc_html_x('Buy Now ($69 only)', 'Free vs Pro Content',  'viral-express'); ?></a>
+            <a target="_blank" class="buy-pro-btn" href="<?php echo esc_url(viral_express_upgrade_url('freevspro-top', 'viral-express-freevspro')); ?>"><?php echo esc_html_x('Buy Now (From $69)', 'Free vs Pro Content',  'viral-express'); ?></a>
         </td>
     </tr>
     <tr>
@@ -33,14 +33,22 @@
     <tr>
         <td>
             <span><?php echo esc_html_x('1) One Click Demo Import', 'Free vs Pro Content',  'viral-express'); ?></span>
-            <p><?php echo esc_html_x('With one-click demo import, you can install the demo content with just one click. The Premium version has 17 ready-made demos to choose from, most of them available in both Customizer and Elementor versions.', 'Free vs Pro Content',  'viral-express'); ?></p>
+            <p><?php echo esc_html_x('With one-click demo import, you can install the demo content with just one click. The Premium version has 16 ready-made demos to choose from, most of them available in both Customizer and Elementor versions.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('6 Demos', 'Free vs Pro Content',  'viral-express'); ?></td>
-        <td><?php echo esc_html_x('17 Demos', 'Free vs Pro Content',  'viral-express'); ?></td>
+        <td><?php echo esc_html_x('16 Demos', 'Free vs Pro Content',  'viral-express'); ?></td>
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('2) GDPR Compliance & Cookies Consent', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/configuring-gdpr-settings/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('2) Viral Pro Panel', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <p><?php echo esc_html_x('One dashboard with a setup checklist, one-click demo importer, plugin installer, system status, license activation, Add Widget Area and Theme Options to switch off the features you don\'t use. New sites also get starter content to begin with.', 'Free vs Pro Content',  'viral-express'); ?></p>
+        </td>
+        <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
+        <td><?php echo esc_html_x('Advanced', 'Free vs Pro Content',  'viral-express'); ?></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php echo esc_html_x('3) GDPR Compliance & Cookies Consent', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/configuring-gdpr-settings/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The Premium version is fully GDPR compliance. Means no data is collected if you use the theme alone. Also the premium version has option to add GDPR Compliance & Cookies Consent text with buttons.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -48,7 +56,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('3) Maintenance Mode', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/setting-up-maintenance-mode-page/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('4) Maintenance Mode', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/setting-up-maintenance-mode-page/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The premium version has an inbuilt option to add the Maintenance(under construction) Screen with countdown time. The screen is previewed live inside the customizer and has its own typography settings for the heading, text and countdown along with logo width and social icon size. You don\'t need to install additional plugins.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -56,7 +64,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('4) Elementor Compatible', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <span><?php echo esc_html_x('5) Elementor Compatible', 'Free vs Pro Content',  'viral-express'); ?></span>
             <p><?php echo esc_html_x('Fan of Pagebuilder? No problem, with premium version you can create your website with Elementor. Elementor provides you with unlimited possibilities to create the website of your imagination.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
@@ -64,15 +72,15 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('5) Elementor Widgets', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#ElementorModule" target="_blank"><?php echo esc_html_x('View Demo', 'Free vs Pro Content',  'viral-express'); ?></a></span>
-            <p><?php echo esc_html_x('The premium version ships its own magazine widgets for Elementor - news, tile, slider, carousel, ticker, featured and single post modules, all with Ajax tabs and pagination built in.', 'Free vs Pro Content',  'viral-express'); ?></p>
+            <span><?php echo esc_html_x('6) Elementor Widgets', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#ElementorModule" target="_blank"><?php echo esc_html_x('View Demo', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <p><?php echo esc_html_x('The premium version ships 47 magazine widgets for Elementor - 30 news, 8 tile, 5 carousel and 4 slider modules, all with Ajax tabs and pagination built in.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('20+ Widgets', 'Free vs Pro Content',  'viral-express'); ?></td>
-        <td><?php echo esc_html_x('45+ Widgets', 'Free vs Pro Content',  'viral-express'); ?></td>
+        <td><?php echo esc_html_x('47 Widgets', 'Free vs Pro Content',  'viral-express'); ?></td>
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('6) Multiple Header Layouts and Settings', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#III.MainHeader" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('7) Multiple Header Layouts and Settings', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#III.MainHeader" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('Multiple header variants in the theme are bound to make navigating your website fun & dynamic. Choose between 7 differently designed headers. We have included the most popular header layouts that fit your needs.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td>2</td>
@@ -80,15 +88,31 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('7) Top Header Bar', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#II.TopHeader" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
-            <p><?php echo esc_html_x('Viral Pro comes with an option for the top bar where you can add contact address, social icon, language picker, ticker or any informative texts.', 'Free vs Pro Content',  'viral-express'); ?></p>
+            <span><?php echo esc_html_x('8) Top Header Builder', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#II.TopHeader" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <p><?php echo esc_html_x('Place elements on the left, center and right of the top header: date/time, menu, widget, news ticker, social icons, search, login/account link, button, trending tags or custom HTML.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
         <td><?php echo esc_html_x('Advanced', 'Free vs Pro Content',  'viral-express'); ?></td>
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('8) Mega Menu', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/create-mega-menu/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('9) Breaking News Bar', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <p><?php echo esc_html_x('One dismissible headline above the header, in your own colors.', 'Free vs Pro Content',  'viral-express'); ?></p>
+        </td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php echo esc_html_x('10) Page Title Layouts', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <p><?php echo esc_html_x('Choose from 5 page title layouts with background color, image and overlay.', 'Free vs Pro Content',  'viral-express'); ?></p>
+        </td>
+        <td><?php echo esc_html_x('1', 'Free vs Pro Content',  'viral-express'); ?></td>
+        <td><?php echo esc_html_x('5', 'Free vs Pro Content',  'viral-express'); ?></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php echo esc_html_x('11) Mega Menu', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/create-mega-menu/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The Premium version has an inbuilt mega menu that will allow you to create beautiful big menus in no time.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -96,7 +120,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('9) Off Canvas Menu', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/creating-off-canvas-menu/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('12) Off Canvas Menu', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/creating-off-canvas-menu/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('An off-canvas menu is one of the trending menu types. It displays the site content in elegant flyout effects and cool animations.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
@@ -104,7 +128,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('10) Scroll Top', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#IV.ScrollTop" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('13) Scroll Top', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#IV.ScrollTop" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('Scroll to Top is a utility option that enables you to scroll to the top of your website in just one click.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
@@ -112,39 +136,47 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('11) Advanced Typography Options for Specific Sections', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#TypographySettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
-            <p><?php echo esc_html_x('The premium version has 800+ Google Fonts to choose from, and lets you set the typography of each section separately. Don\'t want to use Google Fonts? No problem, it has web safe standard non-Google fonts to choose from as well.', 'Free vs Pro Content',  'viral-express'); ?></p>
+            <span><?php echo esc_html_x('14) Advanced Typography Options for Specific Sections', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#TypographySettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <p><?php echo esc_html_x('The premium version has 1,400+ Google Fonts to choose from, and lets you set the typography of each section separately. Don\'t want to use Google Fonts? No problem, it has web safe standard non-Google fonts to choose from as well.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
         <td><?php echo esc_html_x('Advanced', 'Free vs Pro Content',  'viral-express'); ?></td>
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('12) Color Options', 'Free vs Pro Content',  'viral-express'); ?></span>
-            <p><?php echo esc_html_x('The free version has a basic color option but the premium version has advanced color options that allow customizing the color everywhere like header, post/page, footer, and front page sections.', 'Free vs Pro Content',  'viral-express'); ?></p>
+            <span><?php echo esc_html_x('15) Color Options', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <p><?php echo esc_html_x('The free version has a basic color option but the premium version has advanced color options that allow customizing the color everywhere like header, post/page, footer, front page sections, the offcanvas panel and form fields. Menu, buttons, links and block titles follow your primary color.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
         <td><?php echo esc_html_x('Advanced', 'Free vs Pro Content',  'viral-express'); ?></td>
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('13) Front Page Section Reorder', 'Free vs Pro Content',  'viral-express'); ?></span>
-            <p><?php echo esc_html_x('Option to organize how the front page section appears.', 'Free vs Pro Content',  'viral-express'); ?></p>
+            <span><?php echo esc_html_x('16) Corner Radius', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <p><?php echo esc_html_x('Set the corner radius for images, buttons, form fields and labels.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('14) Front Page Sections', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#FrontPageSetup" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
-            <p><?php echo esc_html_x('Front Page section refers to the home page magazine block section that you can create from the customizer front page panel. Viral Pro has additional front page sections with added block layouts/styles.', 'Free vs Pro Content',  'viral-express'); ?></p>
+            <span><?php echo esc_html_x('17) Accessibility Ready', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <p><?php echo esc_html_x('Visible keyboard focus outline, sliders, carousels and tickers that pause on hover and focus, and reduced-motion support - no autoplay, parallax or animated scrolling for visitors who ask for it.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
-        <td>5</td>
-        <td>16</td>
+        <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
+        <td><?php echo esc_html_x('Advanced', 'Free vs Pro Content',  'viral-express'); ?></td>
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('15) Front Page Video Background, Image Motion Background, Gradient Background', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/configure-advanced-settings/#totalplus-background-types" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('18) Front Page Builder', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#FrontPageSetup" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <p><?php echo esc_html_x('Add any of 12 section types to the front page as many times as you like, each with its own content and style. Rename, reorder, hide and remove them, with a live preview. Includes an Advertisement section.', 'Free vs Pro Content',  'viral-express'); ?></p>
+        </td>
+        <td><?php echo esc_html_x('5 Fixed', 'Free vs Pro Content',  'viral-express'); ?></td>
+        <td><?php echo esc_html_x('12 Types, Unlimited', 'Free vs Pro Content',  'viral-express'); ?></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php echo esc_html_x('19) Front Page Video Background, Image Motion Background, Gradient Background', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/configure-advanced-settings/#totalplus-background-types" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The premium version has advanced background options that include an option to choose from a video background, moving background, or gradient background.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -152,7 +184,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('16) Front Page Shape Dividers', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/configure-advanced-settings/#totalplus-shape-divider" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('20) Front Page Shape Dividers', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/configure-advanced-settings/#totalplus-shape-divider" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The theme has 16 shape dividers that you can choose from to create a nice transition effect between sections', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -160,7 +192,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('17) Front Page Sections with Full Screen Height', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/configure-advanced-settings/#totalplus-full-window-height" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('21) Front Page Sections with Full Screen Height', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/configure-advanced-settings/#totalplus-full-window-height" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('A front page section that covers the full screen despite having less content. It is useful for a one-page website.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -168,7 +200,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('18) Front Page 50+ Magazine Blocks', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://demo.hashthemes.com/viral-pro/#block-styles" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('22) Front Page 50+ Magazine Blocks', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://demo.hashthemes.com/viral-pro/#block-styles" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The theme has a huge collection of ready to use blocks with tons of options. Play with these blocks, build your own layout, change the background and colors, hide, and show different elements. Have it your Way!', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td>12</td>
@@ -176,15 +208,15 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('19) Ajax Tabs and Pagination for Magazine Blocks', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://demo.hashthemes.com/viral-pro/#ajax-loader" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
-            <p><?php echo esc_html_x('Speed up your website by loading minimum content and then displaying them with Ajax Tabs and Pagination (Numbered Page, Prev/Next, Load More and Load on Scroll).', 'Free vs Pro Content',  'viral-express'); ?></p>
+            <span><?php echo esc_html_x('23) Category Tabs and Ajax Pagination', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://demo.hashthemes.com/viral-pro/#ajax-loader" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <p><?php echo esc_html_x('Category tabs plus Next/Previous, Load More and page numbers on front page news blocks, loaded without leaving the page.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('20) Title Bar Styles for Magazine Blocks', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#FrontPageSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('24) Title Bar Styles for Magazine Blocks', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#FrontPageSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('Every magazine block heading can be given its own title bar design. The premium version has 12 title bar styles to pick from, each with its own color settings.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -192,7 +224,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('21) Thumbnail Hover Effect and Lazy Load', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#FrontPageSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('25) Thumbnail Hover Effect and Lazy Load', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#FrontPageSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The thumb hover style will allow you to choose the animation effect of the images on the homepage upon hovering. The premium version has 10 hover effects to choose from.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -200,7 +232,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('22) Placeholder Image', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#FrontPageSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('26) Placeholder Image', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#FrontPageSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('This option will allow you to set a placeholder image for the images that do not have a featured image.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -208,7 +240,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('23) Advanced Blog Settings', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#BlogPageSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('27) Advanced Blog Settings', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#BlogPageSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The Premium version has an advanced blog page setting option. The option allows to show or hide each element of the blog.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
@@ -216,15 +248,23 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('24) Blog/Archive Layouts', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://demo.hashthemes.com/viral-pro/#archive-demos" target="_blank"><?php echo esc_html_x('View Demo', 'Free vs Pro Content',  'viral-express'); ?></a></span>
-            <p><?php echo esc_html_x('7 Archive Layouts to showcase your content. Choose from columns, lists, and mosaic layout variations that are suited for your need.', 'Free vs Pro Content',  'viral-express'); ?></p>
+            <span><?php echo esc_html_x('28) Blog Pagination', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <p><?php echo esc_html_x('Page numbers, Load More button or infinite scroll on blog, archive and search pages.', 'Free vs Pro Content',  'viral-express'); ?></p>
+        </td>
+        <td><?php echo esc_html_x('Page Numbers', 'Free vs Pro Content',  'viral-express'); ?></td>
+        <td><?php echo esc_html_x('3 Styles', 'Free vs Pro Content',  'viral-express'); ?></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php echo esc_html_x('29) Blog/Archive Layouts', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://demo.hashthemes.com/viral-pro/#archive-demos" target="_blank"><?php echo esc_html_x('View Demo', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <p><?php echo esc_html_x('7 Archive Layouts to showcase your content. Choose from columns, lists, and mosaic layout variations that are suited for your need, and give any category, tag or author page its own layout.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td>2</td>
         <td>7</td>
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('25) Single Article/Post Layouts', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://demo.hashthemes.com/viral-pro/#single-demos" target="_blank"><?php echo esc_html_x('View Demo', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('30) Single Article/Post Layouts', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://demo.hashthemes.com/viral-pro/#single-demos" target="_blank"><?php echo esc_html_x('View Demo', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The theme has 7 differently designed article pages suited for different needs. Each or every post can be shown with different layout and with or without the sidebar. Additionally, the theme has video, audio, gallery, link and standard post formats.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td>2</td>
@@ -232,7 +272,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('26) Table of Contents for Single Posts', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#BlogPageSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('31) Table of Contents for Single Posts', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#BlogPageSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The premium version builds a nested table of contents from the headings of the article itself. Choose the position, how deep it goes (H2 down to H6), the list style, collapsible and sticky modes, highlighting of the section being read, plus its own colors and typography. No extra plugin needed.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -240,7 +280,15 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('27) NewsArticle Structured Data (JSON-LD)', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('32) Reading Progress Bar', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <p><?php echo esc_html_x('A reading progress bar on single posts, with its own color.', 'Free vs Pro Content',  'viral-express'); ?></p>
+        </td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php echo esc_html_x('33) NewsArticle Structured Data (JSON-LD)', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The free version outputs basic Schema.org markup. The premium version adds the NewsArticle JSON-LD block that Google Top Stories and Google News actually read, including speakable markup, and stands down automatically when an SEO plugin is publishing its own.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
@@ -248,7 +296,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('28) Google News Sitemap', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('34) Google News Sitemap', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The premium version publishes a Google News sitemap at /news-sitemap.xml so your latest articles can be picked up for Google News without an additional plugin.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -256,7 +304,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('29) Speculative Loading', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('35) Speculative Loading', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The next article is fetched before the reader clicks it, so it opens instantly. The eagerness of the prefetch is configurable from the customizer.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -264,7 +312,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('30) Icon Library and Google Font Loading Control', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('36) Icon Library and Google Font Loading Control', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('Both versions can load Google Fonts locally. The premium version goes further - switch off the icon libraries you do not use (they also disappear from the icon picker), request only the font weights your site actually needs, and preconnect to the Google font hosts.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
@@ -272,7 +320,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('31) Print Stylesheet', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <span><?php echo esc_html_x('37) Print Stylesheet', 'Free vs Pro Content',  'viral-express'); ?></span>
             <p><?php echo esc_html_x('Articles print cleanly - without the navigation, sidebar or advertising.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -280,7 +328,15 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('32) Add New Widget Area', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/add-new-widget-area/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('38) Header & Footer Code', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <p><?php echo esc_html_x('Add analytics, tracking pixels, site verification tags and other code to the head, right after the opening body tag, or before the closing body tag, from Theme Options - with a code editor.', 'Free vs Pro Content',  'viral-express'); ?></p>
+        </td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
+        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
+    </tr>
+    <tr>
+        <td>
+            <span><?php echo esc_html_x('39) Add New Widget Area', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/add-new-widget-area/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('Create unlimited widget areas using our premium version. You can create new widget areas for placing widgets.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -288,15 +344,15 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('33) Custom Widgets', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <span><?php echo esc_html_x('40) Custom Widgets', 'Free vs Pro Content',  'viral-express'); ?></span>
             <p><?php echo esc_html_x('Huge collection of custom widgets for magazine websites.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td>4</td>
-        <td>23</td>
+        <td><?php echo esc_html_x('20+', 'Free vs Pro Content',  'viral-express'); ?></td>
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('34) PreLoader Option', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#II.PreloaderOptions" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('41) PreLoader Option', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#II.PreloaderOptions" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The loading screen appears until the website is fully loaded. The premium version has the option to choose from 16 preloaders or add your preloader image as well.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -304,7 +360,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('35) Sidebar Layout Options', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#SidebarSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('42) Sidebar Layout Options', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#SidebarSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php printf(esc_html_x('The premium version has the option to change the sidebar layout universally or %1$schange the sidebar for individual posts/pages%2$s. Moreover, it allows choosing the sidebar widgets for individual posts/pages.', 'Free vs Pro Content',  'viral-express'), '<a href="https://hashthemes.com/articles/change-the-sidebar-layout-and-choose-unique-widget/" target="_blank">', '</a>'); ?></p>
         </td>
         <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
@@ -312,15 +368,15 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('36) Advertising & Monetization', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/adding-widgets-above-and-below-front-page-section/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
-            <p><?php echo esc_html_x('Want to monetize your content? Adding image banner ads or Adsense Code is easy with Viral Pro. There are numerous spots where you can display your ads easily using widgets.', 'Free vs Pro Content',  'viral-express'); ?></p>
+            <span><?php echo esc_html_x('43) Advertisement Manager', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <p><?php echo esc_html_x('Want to monetize your content? Add Google AdSense code or image banners in 8 placements - above and below the header; before, inside and after post content; between archive posts; above the footer - plus an Advertisement section for the front page. Show ads per device, reserve the ad height so pages don\'t jump, add an optional "Advertisement" label, hide ads for logged-in users and switch them off on any post.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
         <td><?php echo esc_html_x('Advanced', 'Free vs Pro Content',  'viral-express'); ?></td>
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('37) Author Box, Social Share, and Related Post in the Single Post', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <span><?php echo esc_html_x('44) Author Box, Social Share, and Related Post in the Single Post', 'Free vs Pro Content',  'viral-express'); ?></span>
             <p><?php echo esc_html_x('Shows the short intro of the post author along with social icons, major Social Share Icons without using a plugin, and related posts by category with 4 related post styles.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -328,7 +384,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('38) Unique Post Layout for Each Post', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/changing-post-layout/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('45) Unique Post Layout for Each Post', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/changing-post-layout/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The premium version has the option to choose different style for individual post.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -336,7 +392,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('39) Different Background and Text Color for Each Post and Page', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/change-the-background-and-text-color/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('46) Different Background and Text Color for Each Post and Page', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/change-the-background-and-text-color/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('The premium version comes with the option to configure the background and text color of each page and post on the website. It will allow you to choose the custom background color, background image, and text color for any page or post you like.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -344,7 +400,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('40) Hide Header and Footer for Each Post and Page', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/hide-header-and-footer/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <span><?php echo esc_html_x('47) Hide Header and Footer for Each Post and Page', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/articles/hide-header-and-footer/" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
             <p><?php echo esc_html_x('You can show/hide the header and footer for each of the pages/posts. It is helpful if you are running an infographic website.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -352,15 +408,15 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('41) Advanced Footer Setting', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#FooterSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
-            <p><?php echo esc_html_x('The premium version has the option to choose from 15 footer columns layout and 5 footer styles, and to customize the background and text colors.', 'Free vs Pro Content',  'viral-express'); ?></p>
+            <span><?php echo esc_html_x('48) Advanced Footer Setting', 'Free vs Pro Content',  'viral-express'); ?> - <a href="https://hashthemes.com/documentation/viral-pro-documentation/#FooterSettings" target="_blank"><?php echo esc_html_x('Detail', 'Free vs Pro Content',  'viral-express'); ?></a></span>
+            <p><?php echo esc_html_x('The premium version has the option to choose from 15 footer columns layout and 5 footer styles, and to customize the background and text colors. The footer bar can show a logo, footer menu and social icons above the copyright text.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
         <td><?php echo esc_html_x('Advanced', 'Free vs Pro Content',  'viral-express'); ?></td>
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('42) Remove Footer Credit Text', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <span><?php echo esc_html_x('49) Remove Footer Credit Text', 'Free vs Pro Content',  'viral-express'); ?></span>
             <p><?php echo esc_html_x('The premium version easily allows you to remove or change the footer credit text.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -368,7 +424,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('43) WooCommerce Compatible', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <span><?php echo esc_html_x('50) WooCommerce Compatible', 'Free vs Pro Content',  'viral-express'); ?></span>
             <p><?php echo esc_html_x('The premium version has enhanced WooCommerce options like adding a cart icon in the menu, product page settings, sidebar layout settings, and more.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('Basic', 'Free vs Pro Content',  'viral-express'); ?></td>
@@ -376,7 +432,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('44) RTL Ready', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <span><?php echo esc_html_x('51) RTL Ready', 'Free vs Pro Content',  'viral-express'); ?></span>
             <p><?php echo esc_html_x('The Premium Version is fully compatible with RTL (Right to left) languages like Arabic', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
@@ -384,7 +440,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('45) Multilingual Ready', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <span><?php echo esc_html_x('52) Multilingual Ready', 'Free vs Pro Content',  'viral-express'); ?></span>
             <p><?php echo esc_html_x('The Premium Version is fully compatible with WPML and Poylang. Create the website in multiple languages.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><?php echo esc_html_x('Partially', 'Free vs Pro Content',  'viral-express'); ?></td>
@@ -392,7 +448,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('46) Translation Ready', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <span><?php echo esc_html_x('53) Translation Ready', 'Free vs Pro Content',  'viral-express'); ?></span>
             <p><?php echo esc_html_x('Both the free and pro versions are fully translation ready.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
@@ -400,7 +456,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('47) Search Engine Optimization', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <span><?php echo esc_html_x('54) Search Engine Optimization', 'Free vs Pro Content',  'viral-express'); ?></span>
             <p><?php echo esc_html_x('Follows best SEO practices so that your website always ranks higher in Search Engines.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
@@ -408,7 +464,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('48) Major Browser Compatible', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <span><?php echo esc_html_x('55) Major Browser Compatible', 'Free vs Pro Content',  'viral-express'); ?></span>
             <p><?php echo esc_html_x('The website runs smoothly in all major browsers.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
@@ -416,7 +472,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('49) Responsive - Mobile Friendly', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <span><?php echo esc_html_x('56) Responsive - Mobile Friendly', 'Free vs Pro Content',  'viral-express'); ?></span>
             <p><?php echo esc_html_x('Adapts to any screen size and displays beautifully.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
@@ -424,7 +480,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('50) Fast and Friendly Support', 'Free vs Pro Content',  'viral-express'); ?></span>
+            <span><?php echo esc_html_x('57) Fast and Friendly Support', 'Free vs Pro Content',  'viral-express'); ?></span>
             <p><?php echo esc_html_x('For the Premium theme, the user will get a reply in 10 hours or less.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
@@ -432,7 +488,7 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('51) Polylang Support', 'Free vs Pro Content', 'viral-express'); ?></span>
+            <span><?php echo esc_html_x('58) Polylang Support', 'Free vs Pro Content', 'viral-express'); ?></span>
             <p><?php echo esc_html_x('Built in Polylang integration so theme strings and customizer content translate correctly on multilingual sites.', 'Free vs Pro Content', 'viral-express'); ?></p>
         </td>
         <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
@@ -440,19 +496,11 @@
     </tr>
     <tr>
         <td>
-            <span><?php echo esc_html_x('52) System Status Panel', 'Free vs Pro Content', 'viral-express'); ?></span>
-            <p><?php echo esc_html_x('A status screen inside the theme panel that reports your PHP version, memory limit, server configuration and other values support may ask for.', 'Free vs Pro Content', 'viral-express'); ?></p>
-        </td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/no.png'); ?>" alt="No"></td>
-        <td><img src="<?php echo esc_url(get_template_directory_uri() . '/welcome/css/yes.png'); ?>" alt="Yes"></td>
-    </tr>
-    <tr>
-        <td>
             <span><?php echo esc_html_x('Upgrade to Pro', 'Free vs Pro Content',  'viral-express'); ?></span>
-            <p><?php echo esc_html_x('Upgrade to Pro version for additional features and better supports.', 'Free vs Pro Content',  'viral-express'); ?></p>
+            <p><?php echo esc_html_x('Upgrade to Pro version for additional features and better support.', 'Free vs Pro Content',  'viral-express'); ?></p>
         </td>
         <td colspan="2">
-            <a target="_blank" class="buy-pro-btn" href="<?php echo esc_url(viral_express_upgrade_url('freevspro-bottom', 'viral-express-freevspro')); ?>"><?php echo esc_html_x('Buy Now ($69 only)', 'Free vs Pro Content',  'viral-express'); ?></a>
+            <a target="_blank" class="buy-pro-btn" href="<?php echo esc_url(viral_express_upgrade_url('freevspro-bottom', 'viral-express-freevspro')); ?>"><?php echo esc_html_x('Buy Now (From $69)', 'Free vs Pro Content',  'viral-express'); ?></a>
         </td>
     </tr>
 </table>

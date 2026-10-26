@@ -142,6 +142,9 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     'label' => esc_html__('For more options,', 'viral-express'),
     'choices' => array(
         esc_html__('16 animated preloaders, or upload your own image', 'viral-express'),
+        esc_html__('Corner radius for images, buttons, form fields and labels', 'viral-express'),
+        esc_html__('Accessibility ready - keyboard focus outline and reduced-motion support', 'viral-express'),
+        esc_html__('Add analytics, tracking and verification code to the header and footer', 'viral-express'),
         esc_html__('Admin page custom logo', 'viral-express')
     ),
     'priority' => 100,
@@ -251,8 +254,8 @@ $wp_customize->add_control(new Viral_Express_Toggle_Control($wp_customize, 'vira
 
 // Seasonal campaigns swap the banner copy automatically - see viral_express_get_active_campaign().
 $viral_express_campaign = viral_express_get_active_campaign();
-$viral_express_banner_title = $viral_express_campaign ? $viral_express_campaign['title'] : esc_html__('One-time payment. Unlimited sites. Lifetime updates.', 'viral-express');
-$viral_express_banner_button = $viral_express_campaign ? $viral_express_campaign['button'] : esc_html__('Get Viral Pro - $69', 'viral-express');
+$viral_express_banner_title = $viral_express_campaign ? $viral_express_campaign['title'] : esc_html__('One-time payment. Lifetime updates and support.', 'viral-express');
+$viral_express_banner_button = $viral_express_campaign ? $viral_express_campaign['button'] : esc_html__('Get Viral Pro - From $69', 'viral-express');
 
 $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-pro-section', array(
     'priority' => -10,
@@ -278,20 +281,22 @@ $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'vir
     'upgrade_url' => admin_url('admin.php?page=viral-express-welcome')
 )));
 
-$viral_pro_features = '<p><strong>' . esc_html__("$69 once. No subscription, no renewal fees.", "viral-express") . '</strong><br>' . esc_html__("Use Viral Pro on unlimited websites, keep every future update free, and get support replies in 10 hours or less.", "viral-express") . '</p>
+$viral_pro_features = '<p><strong>' . esc_html__("From $69 once. No subscription, no renewal fees.", "viral-express") . '</strong><br>' . esc_html__("1 site $69, unlimited sites $99. Every future update is free, and support replies come in 10 hours or less.", "viral-express") . '</p>
     <ul class="upsell-features">
-	<li>' . esc_html__("17 ready-made demos that can be imported with one click", 'viral-express') . '</li>
+	<li>' . esc_html__("16 ready-made demos that can be imported with one click", 'viral-express') . '</li>
         <li>' . esc_html__("Elementor widgets built into the theme - no companion plugin needed", 'viral-express') . '</li>
 	<li>' . esc_html__("50+ magazine blocks for customizer", 'viral-express') . '</li>
-	<li>' . esc_html__("Customizer home page section reorder", 'viral-express') . '</li>
-	<li>' . esc_html__("45+ magazine widgets for Elementor", 'viral-express') . '</li>
-        <li>' . esc_html__("Ajax Tabs and Ajax Paginations for all Elementor widgets", 'viral-express') . '</li>
+	<li>' . esc_html__("Front page builder - add any of 12 section types as many times as you like", 'viral-express') . '</li>
+	<li>' . esc_html__("47 magazine widgets for Elementor", 'viral-express') . '</li>
+        <li>' . esc_html__("Category tabs and Ajax pagination on front page blocks and Elementor widgets", 'viral-express') . '</li>
 	<li>' . esc_html__("12 title bar styles and 10 thumbnail hover effects for magazine blocks", 'viral-express') . '</li>
-	<li>' . esc_html__("7 header layouts with advanced settings", 'viral-express') . '</li>
-        <li>' . esc_html__("7 differently designed Blog/Archive layouts", 'viral-express') . '</li>
+	<li>' . esc_html__("7 header layouts, a top header builder and a breaking news bar", 'viral-express') . '</li>
+        <li>' . esc_html__("5 page title layouts", 'viral-express') . '</li>
+        <li>' . esc_html__("7 Blog/Archive layouts, and a layout of its own for any category, tag or author page", 'viral-express') . '</li>
+        <li>' . esc_html__("Load More button or infinite scroll on blog and archive pages", 'viral-express') . '</li>
 	<li>' . esc_html__("7 differently designed Article/Post layouts", 'viral-express') . '</li>
-	<li>' . esc_html__("23 custom widgets", 'viral-express') . '</li>
-	<li>' . esc_html__("Table of contents for single posts", 'viral-express') . '</li>
+	<li>' . esc_html__("20+ custom widgets", 'viral-express') . '</li>
+	<li>' . esc_html__("Table of contents and reading progress bar for single posts", 'viral-express') . '</li>
 	<li>' . esc_html__("NewsArticle structured data in JSON-LD with speakable markup", 'viral-express') . '</li>
 	<li>' . esc_html__("Google News sitemap", 'viral-express') . '</li>
 	<li>' . esc_html__("Speculative loading - the next article opens instantly", 'viral-express') . '</li>
@@ -299,21 +304,24 @@ $viral_pro_features = '<p><strong>' . esc_html__("$69 once. No subscription, no 
 	<li>' . esc_html__("Print stylesheet for articles", 'viral-express') . '</li>
 	<li>' . esc_html__("GDPR compliance & cookies consent", 'viral-express') . '</li>
 	<li>' . esc_html__("In-built megaMenu", 'viral-express') . '</li>
-	<li>' . esc_html__("Advanced typography options", 'viral-express') . '</li>
-	<li>' . esc_html__("Advanced color options", 'viral-express') . '</li>
+	<li>' . esc_html__("1,400+ Google Fonts and advanced typography options", 'viral-express') . '</li>
+	<li>' . esc_html__("Advanced color options and corner radius", 'viral-express') . '</li>
 	<li>' . esc_html__("Preloader option", 'viral-express') . '</li>
 	<li>' . esc_html__("Advanced blog & article settings", 'viral-express') . '</li>
-	<li>' . esc_html__("Advanced footer setting", 'viral-express') . '</li>
-	<li>' . esc_html__("Advanced advertising & monetization options", 'viral-express') . '</li>
+	<li>' . esc_html__("Advanced footer settings with a logo, menu and social icons footer bar", 'viral-express') . '</li>
+	<li>' . esc_html__("Advertisement manager - AdSense or image banners in 8 placements", 'viral-express') . '</li>
 	<li>' . esc_html__("WooCommerce compatible", 'viral-express') . '</li>
 	<li>' . esc_html__("Polylang compatible", 'viral-express') . '</li>
 	<li>' . esc_html__("Fully RTL(right to left) languages compatible", 'viral-express') . '</li>
         <li>' . esc_html__("Maintenance mode option", 'viral-express') . '</li>
         <li>' . esc_html__("Remove footer credit text", 'viral-express') . '</li>
+	<li>' . esc_html__("Header & footer code for analytics, pixels and verification tags", 'viral-express') . '</li>
+	<li>' . esc_html__("Accessibility ready - keyboard focus outline and reduced-motion support", 'viral-express') . '</li>
+	<li>' . esc_html__("Viral Pro Panel with setup checklist, demo importer, system status and license activation", 'viral-express') . '</li>
 	<li>' . esc_html__("Unlimited custom widget areas", "viral-express") . '</li>
 	<li>' . esc_html__("16 SVG shape dividers between front page sections", "viral-express") . '</li>
 	</ul>
-	<a class="ht-implink button button-primary" href="' . esc_url(viral_express_upgrade_url('why-upgrade-cta', 'viral-express-customizer')) . '" target="_blank">' . esc_html__("Get Viral Pro - $69", 'viral-express') . '</a>
+	<a class="ht-implink button button-primary" href="' . esc_url(viral_express_upgrade_url('why-upgrade-cta', 'viral-express-customizer')) . '" target="_blank">' . esc_html__("Get Viral Pro - From $69", 'viral-express') . '</a>
 	<p style="text-align:center;margin:10px 0 0"><a href="' . admin_url('admin.php?page=viral-express-welcome&section=free_vs_pro') . '" target="_blank">' . esc_html__("Compare Free vs Pro", 'viral-express') . '</a></p>';
 
 /* ============PRO FEATURES============ */
@@ -395,7 +403,7 @@ $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'vir
 )));
 
 $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-ads-upgrade-section', array(
-    'title' => esc_html__('Advertising & Monetization', 'viral-express'),
+    'title' => esc_html__('Advertisement Manager', 'viral-express'),
     'priority' => 55,
     'upgrade_text' => esc_html__('Get Pro', 'viral-express'),
     'class' => 'ht--single-row ht--pro-row',

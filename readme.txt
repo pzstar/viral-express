@@ -5,7 +5,7 @@ Viral Express is distributed under the terms of the GNU GPL (http://www.gnu.org/
 Contributors: hashthemes
 Requires at least: 6.3
 Tested up to: 7.0
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -18,6 +18,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 3. Click Activate to use your new theme right away.
 
 == Changelog ==
+= 1.1.3 - Oct 26 2026 =
+* Starter content added, based on the Bulletin demo - new sites and the WordPress.org theme preview open with the magazine home page, its colors, fonts and header, eight news posts with photos, a logo, advertisement placeholders, widgets in every widget area and a menu - Added
+* Starter posts now show in the front page sections while previewing a new site in the Customizer, before it is published - Added
+* Fonts uploaded with Hash Custom Font Uploader are no longer also loaded from Google Fonts when they share a name - Fixed
+* Viral Pro feature lists in the Customizer and on the welcome page updated: front page builder, top header builder, breaking news bar, page title layouts, Load More and infinite scroll, reading progress bar, advertisement manager, header and footer code, corner radius and accessibility - Updated
+* Viral Pro price now shown as "From $69" with the per-site options - Changed
+
 = 1.1.2 - Aug 17 2026 =
 * Free vs Pro comparison rebuilt against Viral Pro 1.6.0 - table of contents, NewsArticle structured data, Google News sitemap, speculative loading, icon and font loading control and print stylesheet added; demo, widget and layout counts corrected - Updated
 * Customizer upgrade section now shows the price and licence terms up front with clearer calls to action - Changed
@@ -126,7 +133,7 @@ Viral Express WordPress Theme bundles the following third-party resources:
 * License: The MIT License (MIT)
 * License Url: https://github.com/marcj/css-element-queries/blob/master/LICENSE
 
-ScreenShot Images
+Screenshot and Starter Content Images (images/starter)
 https://wordpress.org/photos/photo/896640776b/
 https://wordpress.org/photos/photo/950675826d/
 https://wordpress.org/photos/photo/54667f5e22/

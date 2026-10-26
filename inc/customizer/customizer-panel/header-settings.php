@@ -377,9 +377,9 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     'section' => 'viral_express_top_header_options',
     'label' => esc_html__('For more settings,', 'viral-express'),
     'choices' => array(
-        esc_html__('Display Date/time in top header', 'viral-express'),
-        esc_html__('Display Ticker in top header', 'viral-express'),
-        esc_html__('Display Custom Widgets in top header', 'viral-express')
+        esc_html__('Top header builder with elements on the left, center and right', 'viral-express'),
+        esc_html__('Date/time, news ticker, widget, search, login/account link, button or trending tags', 'viral-express'),
+        esc_html__('Breaking news bar - one dismissible headline above the header', 'viral-express')
     ),
     'priority' => 100,
     'upgrade_text' => esc_html__('Unlock in Viral Pro', 'viral-express'),
@@ -626,6 +626,8 @@ $wp_customize->add_control(new Viral_Express_Upgrade_Info_Control($wp_customize,
     'label' => esc_html__('For more options,', 'viral-express'),
     'choices' => array(
         esc_html__('7 header layouts', 'viral-express'),
+        esc_html__('5 page title layouts with background color, image and overlay', 'viral-express'),
+        esc_html__('Color options for the offcanvas panel', 'viral-express'),
         esc_html__('More advanced options', 'viral-express')
     ),
     'priority' => 100,

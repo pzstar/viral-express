@@ -513,7 +513,7 @@ if (!function_exists('viral_express_get_schema_attribute')) {
  */
 function viral_express_upgrade_url($placement = '', $medium = 'viral-express-link') {
     $args = array(
-        'utm_source' => 'wordpress',
+        'utm_source' => 'WordPress',
         'utm_medium' => $medium,
         'utm_campaign' => 'viral-express-upgrade'
     );
@@ -543,7 +543,7 @@ function viral_express_get_active_campaign() {
             'start' => '11-20',
             'end' => '12-02',
             'title' => esc_html__('Black Friday - our biggest discount of the year', 'viral-express'),
-            'button' => esc_html__('Get Viral Pro - $69', 'viral-express'),
+            'button' => esc_html__('Get Viral Pro - From $69', 'viral-express'),
             'image' => 'blackfriday.jpg'
         ),
         array(
@@ -551,7 +551,7 @@ function viral_express_get_active_campaign() {
             'start' => '12-15',
             'end' => '01-05',
             'title' => esc_html__('Christmas & New Year Sale', 'viral-express'),
-            'button' => esc_html__('Get Viral Pro - $69', 'viral-express'),
+            'button' => esc_html__('Get Viral Pro - From $69', 'viral-express'),
             'image' => 'christmas-sale.jpg'
         )
     ));

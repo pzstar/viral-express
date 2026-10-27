@@ -403,3 +403,100 @@ if (!function_exists('viral_express_preview_starter_posts_where')) {
 }
 
 add_filter('posts_where', 'viral_express_preview_starter_posts_where', 10, 2);
+
+if (!function_exists('viral_express_theme_preview_posts')) {
+
+    // The WordPress.org theme preview keeps starter posts only in the object cache, with made-up IDs from 10000 and their keys as slugs, so post lists never see them.
+    // Finds them there and gives them the dates and author the preview leaves out; returns nothing on real sites.
+    function viral_express_theme_preview_posts() {
+        static $posts = null;
+
+        if (null !== $posts) {
+            return $posts;
+        }
+
+        $posts = array();
+
+        if (is_admin() || !get_option('fresh_site') || wp_using_ext_object_cache()) {
+            return $posts;
+        }
+
+        $starter_content = get_theme_starter_content();
+        $keys = array();
+        foreach ((array) ($starter_content['posts'] ?? array()) as $key => $starter_post) {
+            if ('post' === ($starter_post['post_type'] ?? '')) {
+                $keys[$key] = true;
+            }
+        }
+
+        $last_id = 10000 + count((array) ($starter_content['posts'] ?? array())) + count((array) ($starter_content['attachments'] ?? array())) + 20;
+        $found = array();
+        for ($id = 10000; $id < $last_id && count($found) < count($keys); $id++) {
+            $cached = wp_cache_get($id, 'posts');
+            if (is_object($cached) && isset($cached->post_name, $keys[$cached->post_name])) {
+                $found[$cached->post_name] = $cached;
+            }
+        }
+
+        if (!$found) {
+            return $posts;
+        }
+
+        $latest = get_posts(array('numberposts' => 1, 'post_type' => 'post', 'suppress_filters' => true));
+        $author = $latest ? $latest[0]->post_author : 1;
+        $time = current_time('timestamp');
+        $i = 0;
+
+        // Starter content order, newest first, a few hours apart.
+        foreach (array_keys($keys) as $key) {
+            if (!isset($found[$key])) {
+                continue;
+            }
+
+            $data = (object) array_merge((array) $found[$key], array(
+                'post_status' => 'publish',
+                'post_author' => $author,
+                'post_date' => gmdate('Y-m-d H:i:s', $time - $i * 5 * HOUR_IN_SECONDS),
+                'post_date_gmt' => get_gmt_from_date(gmdate('Y-m-d H:i:s', $time - $i * 5 * HOUR_IN_SECONDS)),
+                'post_modified' => gmdate('Y-m-d H:i:s', $time - $i * 5 * HOUR_IN_SECONDS),
+                'comment_status' => 'closed',
+                'filter' => 'raw',
+            ));
+            wp_cache_set($data->ID, $data, 'posts');
+            $posts[] = new WP_Post($data);
+            $i++;
+        }
+
+        return $posts;
+    }
+
+}
+
+if (!function_exists('viral_express_theme_preview_post_lists')) {
+
+    // In the WordPress.org theme preview, the front page sections and post widgets list the starter posts instead of the Theme Unit Test posts.
+    function viral_express_theme_preview_post_lists($posts, $query) {
+        if (null !== $posts || $query->is_main_query() || !in_array($query->get('post_type'), array('', 'post'), true) || $query->get('p') || $query->get('page_id') || $query->get('post__in') || $query->get('s') || $query->get('cat') || $query->get('category_name') || $query->get('tag') || $query->get('tax_query') || $query->get('author')) {
+            return $posts;
+        }
+
+        $preview_posts = viral_express_theme_preview_posts();
+
+        if (!$preview_posts) {
+            return $posts;
+        }
+
+        $per_page = (int) $query->get('posts_per_page');
+        $per_page = $per_page > 0 ? $per_page : count($preview_posts);
+        $offset = (int) $query->get('offset') + (max(1, (int) $query->get('paged')) - 1) * $per_page;
+        $posts = array_slice($preview_posts, $offset, $per_page);
+
+        $query->found_posts = count($preview_posts);
+        $query->max_num_pages = (int) ceil(count($preview_posts) / $per_page);
+
+        return 'ids' === $query->get('fields') ? wp_list_pluck($posts, 'ID') : $posts;
+    }
+
+}
+
+add_filter('posts_pre_query', 'viral_express_theme_preview_post_lists', 10, 2);

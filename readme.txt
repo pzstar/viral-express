@@ -4,7 +4,7 @@ Viral Express is distributed under the terms of the GNU GPL (http://www.gnu.org/
 
 Contributors: hashthemes
 Requires at least: 6.3
-Tested up to: 7.0
+Tested up to: 7.1
 Stable tag: 1.1.3
 Requires PHP: 7.2
 License: GPLv2 or later

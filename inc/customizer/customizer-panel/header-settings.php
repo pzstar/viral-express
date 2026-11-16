@@ -55,11 +55,10 @@ $wp_customize->add_setting('viral_express_hide_title', array(
     'transport' => 'postMessage'
 ));
 
-$wp_customize->add_control('viral_express_hide_title', array(
-    'type' => 'checkbox',
+$wp_customize->add_control(new Viral_Express_Toggle_Control($wp_customize, 'viral_express_hide_title', array(
     'section' => 'title_tagline',
     'label' => esc_html__('Hide Site Title', 'viral-express')
-));
+)));
 
 $wp_customize->add_setting('viral_express_hide_tagline', array(
     'sanitize_callback' => 'viral_express_sanitize_text',
@@ -67,11 +66,10 @@ $wp_customize->add_setting('viral_express_hide_tagline', array(
     'transport' => 'postMessage'
 ));
 
-$wp_customize->add_control('viral_express_hide_tagline', array(
-    'type' => 'checkbox',
+$wp_customize->add_control(new Viral_Express_Toggle_Control($wp_customize, 'viral_express_hide_tagline', array(
     'section' => 'title_tagline',
     'label' => esc_html__('Hide Site Tagline', 'viral-express')
-));
+)));
 
 $wp_customize->add_setting('viral_express_tagline_position', array(
     'sanitize_callback' => 'viral_express_sanitize_text',
@@ -412,7 +410,6 @@ $wp_customize->add_control(new Viral_Express_Tab_Control($wp_customize, 'viral_e
                 'viral_express_mh_show_search',
                 'viral_express_mh_show_cart',
                 'viral_express_mh_show_social',
-                'viral_express_mh_show_offcanvas',
             ),
             'active' => true,
         ),

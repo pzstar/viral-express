@@ -209,7 +209,7 @@ $wp_customize->add_control(new Viral_Express_Switch_Control($wp_customize, 'vira
         'on' => esc_html__('Yes', 'viral-express'),
         'off' => esc_html__('No', 'viral-express')
     ),
-    'description' => esc_html__('It is required to load the Google Fonts locally in order to comply with GDPR. However, if your website is not required to comply with Google Fonts then you can check this field off. Loading the Fonts locally with lots of different Google fonts can decrease the speed of the website slightly.', 'viral-express'),
+    'description' => esc_html__('It is required to load the Google Fonts locally in order to comply with GDPR. However, if your website is not required to comply with Google Fonts then you can turn this off. Loading the Fonts locally with lots of different Google fonts can decrease the speed of the website slightly.', 'viral-express'),
 )));
 
 /* SEO SECTION */
@@ -253,15 +253,26 @@ $wp_customize->add_control(new Viral_Express_Toggle_Control($wp_customize, 'vira
 
 
 // Seasonal campaigns swap the banner copy automatically - see viral_express_get_active_campaign().
+// During a sale the card leads with the sale and drops the list price, which
+// would contradict the discount shown at checkout.
 $viral_express_campaign = viral_express_get_active_campaign();
-$viral_express_banner_title = $viral_express_campaign ? $viral_express_campaign['title'] : esc_html__('One-time payment. Lifetime updates and support.', 'viral-express');
-$viral_express_banner_button = $viral_express_campaign ? $viral_express_campaign['button'] : esc_html__('Get Viral Pro - From $69', 'viral-express');
 
-$wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-pro-section', array(
+$wp_customize->add_section(new Viral_Express_Pro_Banner_Section($wp_customize, 'viral-express-pro-section', array(
     'priority' => -10,
-    'title' => $viral_express_banner_title,
-    'upgrade_text' => $viral_express_banner_button,
+    'badge' => $viral_express_campaign ? $viral_express_campaign['badge'] : esc_html__('Viral Pro', 'viral-express'),
+    'title' => $viral_express_campaign ? $viral_express_campaign['title'] : esc_html__('Run a better news site', 'viral-express'),
+    'points' => array(
+        esc_html__('50+ magazine blocks', 'viral-express'),
+        esc_html__('7 header, blog and post layouts', 'viral-express'),
+        esc_html__('19 one-click demos', 'viral-express')
+    ),
+    'price' => $viral_express_campaign ? '' : '$69',
+    'price_prefix' => esc_html__('From', 'viral-express'),
+    'price_note' => esc_html__('one-time · no renewals', 'viral-express'),
+    'upgrade_text' => $viral_express_campaign ? $viral_express_campaign['button'] : esc_html__('Upgrade to Viral Pro', 'viral-express'),
     'upgrade_url' => viral_express_upgrade_url($viral_express_campaign ? 'banner-' . $viral_express_campaign['id'] : 'banner', 'viral-express-customizer-button'),
+    'note' => esc_html__('7-day money-back guarantee', 'viral-express'),
+    'is_sale' => (bool) $viral_express_campaign,
     'active_callback' => 'viral_express_is_upgrade_notice_active'
 )));
 

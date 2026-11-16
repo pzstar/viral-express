@@ -73,7 +73,7 @@ function viral_express_widgets_show_widget_field($instance = '', $widget_field =
                         if (isset($viral_express_icon_array) && !empty($viral_express_icon_array)) {
                             $icon_array = $viral_express_icon_array;
                         } else {
-                            $icon_array = viral_express_eleganticons_array();
+                            $icon_array = viral_express_icofont_icon_array();
                         }
 
                         foreach ($icon_array as $icon) {

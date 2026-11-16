@@ -20,7 +20,7 @@
                 <?php
                 $viral_express_image = wp_get_attachment_image_src(get_post_thumbnail_id(), 'viral-express-840x420');
                 ?>
-                <a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url($viral_express_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()) ?>"></a>
+                <?php if ($viral_express_image) { ?><a href="<?php the_permalink(); ?>"><img src="<?php echo esc_url($viral_express_image[0]); ?>" alt="<?php echo esc_attr(get_the_title()) ?>"></a><?php } ?>
             </figure>
         <?php endif; ?>
 

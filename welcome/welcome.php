@@ -32,7 +32,7 @@ if (!class_exists('Viral_Express_Welcome')):
                     'thumb_path' => 'https://ps.w.org/elementor/assets/icon-256x256.gif'
                 ),
                 'hash-form' => array(
-                    'name' => 'Hash Form - Drag & Drop Form Builder',
+                    'name' => 'Hash Form Builder',
                     'slug' => 'hash-form',
                     'filename' => 'hash-form',
                     'thumb_path' => 'https://ps.w.org/hash-form/assets/icon-256x256.gif'
@@ -118,7 +118,7 @@ if (!class_exists('Viral_Express_Welcome')):
                 <?php $this->dismiss_button('welcome'); ?>
                 <div class="viral-express-welcome-notice-wrap">
                     <h2><?php esc_html_e('Congratulations!', 'viral-express'); ?></h2>
-                    <p><?php printf(esc_html__('%1$s is now installed and ready to use. You can start either by importing the ready made demo or get started by customizing it your self.', 'viral-express'), $this->theme_name); ?></p>
+                    <p><?php printf(esc_html__('%1$s is installed and ready to use. Start from a ready-made demo, or set up the site yourself.', 'viral-express'), $this->theme_name); ?></p>
 
                     <div class="viral-express-welcome-info">
                         <div class="viral-express-welcome-thumb">
@@ -130,7 +130,7 @@ if (!class_exists('Viral_Express_Welcome')):
                             ?>
                             <div class="viral-express-welcome-import">
                                 <h3><?php esc_html_e('Import Demo', 'viral-express'); ?></h3>
-                                <p><?php esc_html_e('Click below to install and active HashThemes Demo Importer Plugin.', 'viral-express'); ?></p>
+                                <p><?php esc_html_e('Install and activate the HashThemes Demo Importer plugin to import a demo in one click.', 'viral-express'); ?></p>
                                 <p><?php echo $this->generate_hdi_install_button(); ?></p>
                             </div>
                             <?php
@@ -139,8 +139,8 @@ if (!class_exists('Viral_Express_Welcome')):
 
                         <div class="viral-express-welcome-getting-started">
                             <h3><?php esc_html_e('Get Started', 'viral-express'); ?></h3>
-                            <p><?php printf(esc_html__('Here you will find all the necessary links and information on how to use %s.', 'viral-express'), $this->theme_name); ?></p>
-                            <p><a href="<?php echo esc_url(admin_url('admin.php?page=viral-express-welcome')); ?>" class="button button-primary"><?php esc_html_e('Go to Setting Page', 'viral-express'); ?></a></p>
+                            <p><?php printf(esc_html__('A setup checklist, Customizer shortcuts and help for getting the most out of %s.', 'viral-express'), $this->theme_name); ?></p>
+                            <p><a href="<?php echo esc_url(admin_url('admin.php?page=viral-express-welcome')); ?>" class="button button-primary"><?php esc_html_e('Go to Settings Page', 'viral-express'); ?></a></p>
                         </div>
                     </div>
                 </div>
@@ -158,28 +158,21 @@ if (!class_exists('Viral_Express_Welcome')):
         public function welcome_screen() {
             /** Define Tabs Sections */
             $tabs = array(
-                'getting_started' => esc_html__('Getting Started', 'viral-express'),
-                'recommended_plugins' => esc_html__('Recommended Plugins', 'viral-express'),
-                'support' => esc_html__('Support', 'viral-express'),
-                'free_vs_pro' => esc_html__('Free Vs Pro', 'viral-express')
+                'getting_started' => array(esc_html__('Getting Started', 'viral-express'), 'dashicons-flag'),
+                'recommended_plugins' => array(esc_html__('Recommended Plugins', 'viral-express'), 'dashicons-admin-plugins'),
+                'support' => array(esc_html__('Help & Support', 'viral-express'), 'dashicons-sos'),
+                'free_vs_pro' => array(esc_html__('Free vs Pro', 'viral-express'), 'dashicons-star-filled')
             );
+            $section = isset($_GET['section']) && array_key_exists($_GET['section'], $tabs) ? sanitize_key($_GET['section']) : 'getting_started';
             ?>
             <div class="welcome-wrap">
-                <div class="welcome-main-content">
-                    <?php require_once get_template_directory() . '/welcome/sections/header.php'; ?>
+                <?php require_once get_template_directory() . '/welcome/sections/header.php'; ?>
 
-                    <div class="welcome-section-wrapper">
-                        <?php $section = isset($_GET['section']) && array_key_exists($_GET['section'], $tabs) ? $_GET['section'] : 'getting_started'; ?>
-
-                        <div class="welcome-section <?php echo esc_attr($section); ?> clearfix">
-                            <?php require_once get_template_directory() . '/welcome/sections/' . $section . '.php'; ?>
-                        </div>
-                    </div>
+                <div class="welcome-section welcome-section-<?php echo esc_attr($section); ?>">
+                    <?php require_once get_template_directory() . '/welcome/sections/' . $section . '.php'; ?>
                 </div>
 
-                <div class="welcome-footer-content">
-                    <?php require_once get_template_directory() . '/welcome/sections/footer.php'; ?>
-                </div>
+                <?php require_once get_template_directory() . '/welcome/sections/footer.php'; ?>
             </div>
             <?php
         }
@@ -199,11 +192,8 @@ if (!class_exists('Viral_Express_Welcome')):
                 wp_localize_script('viral-express-welcome', 'importer_params', $importer_params);
             }
 
-            if (is_rtl()) {
-                wp_enqueue_style('viral-express-welcome', get_template_directory_uri() . '/welcome/css/welcome.rtl.css', array(), VIRAL_EXPRESS_VER);
-            } else {
-                wp_enqueue_style('viral-express-welcome', get_template_directory_uri() . '/welcome/css/welcome.css', array(), VIRAL_EXPRESS_VER);
-            }
+            // One stylesheet for both directions: it uses logical properties.
+            wp_enqueue_style('viral-express-welcome', get_template_directory_uri() . '/welcome/css/welcome.css', array('dashicons'), VIRAL_EXPRESS_VER);
         }
 
         /* Check if plugin is installed */
@@ -278,7 +268,7 @@ if (!class_exists('Viral_Express_Welcome')):
             $screen = get_current_screen();
 
             if ('toplevel_page_viral-express-welcome' == $screen->id) {
-                $text = sprintf(esc_html__('Please leave us a %s rating if you like our theme . A huge thank you from HashThemes in advance!', 'viral-express'), '<a href="https://wordpress.org/support/theme/viral-express/reviews/?filter=5#new-post" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a>');
+                $text = sprintf(esc_html__('Enjoying Viral Express? Please leave us a %s rating on WordPress.org. Thank you from the HashThemes team!', 'viral-express'), '<a href="https://wordpress.org/support/theme/viral-express/reviews/?filter=5#new-post" target="_blank">&#9733;&#9733;&#9733;&#9733;&#9733;</a>');
             }
 
             return $text;
@@ -310,6 +300,86 @@ if (!class_exists('Viral_Express_Welcome')):
 
             $headers = get_headers($url);
             return stripos($headers[0], "200 OK") ? TRUE : FALSE;
+        }
+
+        // The first things to set up, each marked done from the site's own settings.
+        public function setup_steps() {
+            $demo_active = $this->check_plugin_active_state('hashthemes-demo-importer', 'hashthemes-demo-importer');
+            return array(
+                array(
+                    'title' => esc_html__('Show the front page sections', 'viral-express'),
+                    'text' => esc_html__('Turn on "Enable FrontPage", then fill in each section under Front Page Sections.', 'viral-express'),
+                    'done' => (bool) get_theme_mod('viral_express_enable_frontpage', false) || ('page' === get_option('show_on_front') && 'templates/home-template.php' === get_page_template_slug(get_option('page_on_front'))),
+                    'url' => admin_url('customize.php?autofocus[section]=static_front_page'),
+                ),
+                array(
+                    'title' => esc_html__('Add your logo', 'viral-express'),
+                    'text' => esc_html__('Upload a logo, or keep the site title as text.', 'viral-express'),
+                    'done' => has_custom_logo(),
+                    'url' => admin_url('customize.php?autofocus[control]=custom_logo'),
+                ),
+                array(
+                    'title' => esc_html__('Set up the main menu', 'viral-express'),
+                    'text' => esc_html__('Create a menu and assign it to the Primary Menu location.', 'viral-express'),
+                    'done' => has_nav_menu('primary'),
+                    'url' => admin_url('customize.php?autofocus[panel]=nav_menus'),
+                ),
+                array(
+                    'title' => esc_html__('Choose your colors', 'viral-express'),
+                    'text' => esc_html__('Set the theme color used for buttons, links and highlights.', 'viral-express'),
+                    'done' => false !== get_theme_mod('viral_express_template_color', false),
+                    'url' => admin_url('customize.php?autofocus[section]=colors'),
+                ),
+                array(
+                    'title' => esc_html__('Import a demo (optional)', 'viral-express'),
+                    'text' => esc_html__('Start from a ready-made website instead of an empty one.', 'viral-express'),
+                    'done' => (bool) get_option('hdi_last_imported_demo'),
+                    'url' => $demo_active ? admin_url('themes.php?page=hdi-demo-importer') : '',
+                ),
+            );
+        }
+
+        // Shortcuts into the Customizer panels people look for most.
+        public function quick_links() {
+            $links = array(
+                array('dashicons-id', esc_html__('Site Identity', 'viral-express'), 'section', 'title_tagline'),
+                array('dashicons-admin-appearance', esc_html__('Header', 'viral-express'), 'panel', 'viral_express_header_settings_panel'),
+                array('dashicons-admin-home', esc_html__('Front Page Sections', 'viral-express'), 'panel', 'viral_express_front_page_panel'),
+                array('dashicons-art', esc_html__('Colors', 'viral-express'), 'section', 'colors'),
+                array('dashicons-editor-textcolor', esc_html__('Typography', 'viral-express'), 'panel', 'viral_express_typography_panel'),
+                array('dashicons-menu', esc_html__('Menus', 'viral-express'), 'panel', 'nav_menus'),
+                array('dashicons-admin-post', esc_html__('Blog', 'viral-express'), 'section', 'viral_express_blog_options_section'),
+                array('dashicons-share', esc_html__('Social Icons', 'viral-express'), 'section', 'viral_express_social_section'),
+                array('dashicons-editor-insertmore', esc_html__('Footer', 'viral-express'), 'section', 'viral_express_footer_section'),
+                array('dashicons-admin-generic', esc_html__('General', 'viral-express'), 'panel', 'viral_express_general_settings_panel'),
+            );
+
+            foreach ($links as $i => $link) {
+                $links[$i] = array(
+                    'icon' => $link[0],
+                    'label' => $link[1],
+                    'url' => admin_url('customize.php?autofocus[' . $link[2] . ']=' . $link[3]),
+                );
+            }
+
+            return $links;
+        }
+
+        /*
+         *  One-line plugin descriptions. Built on demand, not in the constructor:
+         *  the class is created before init, and translating there makes
+         *  WordPress load the text domain too early.
+         */
+        public function plugin_descriptions() {
+            return array(
+                'hashthemes-demo-importer' => esc_html__('Import any Viral Express demo, with its content and settings, in one click.', 'viral-express'),
+                'elementor' => esc_html__('Design pages visually with drag and drop.', 'viral-express'),
+                'hash-form' => esc_html__('Build contact forms, surveys and quotes with drag and drop.', 'viral-express'),
+                'hash-elements' => esc_html__('Elementor widgets designed by the makers of Viral Express.', 'viral-express'),
+                'simple-floating-menu' => esc_html__('Add a floating bar of buttons for calls, chat and social links.', 'viral-express'),
+                'smart-blocks' => esc_html__('Magazine-style post blocks for the block editor.', 'viral-express'),
+                'onyx-dark-mode-switcher' => esc_html__('Let visitors switch your site to dark mode.', 'viral-express'),
+            );
         }
 
         public function erase_hide_notice() {
@@ -502,8 +572,8 @@ if (!class_exists('Viral_Express_Welcome')):
                     <p>
                         <?php
                         printf(
-                            /* translators: %1$s is link start tag, %2$s is link end tag. */
-                            esc_html__('Great to see that you have been using Viral Express Theme for some time. We hope you love it, and we would really appreciate it if you would %1$sgive us a %3$s rating%2$s. Your valuable review will inspire us to make it more better.', 'viral-express'), '<a style="text-decoration:none;font-weight:bold;" target="_blank" href="https://wordpress.org/support/theme/viral-express/reviews/?filter=5#new-post">', '</a>', '<span class="viral-express-notice-star"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></span>'
+                            /* translators: %1$s is link start tag, %2$s is link end tag, %3$s is five stars. */
+                            esc_html__('You have been using the Viral Express theme for a while now, and we hope you love it. Would you %1$sgive it a %3$s rating%2$s on WordPress.org? Your review helps other people find the theme and keeps us improving it.', 'viral-express'), '<a style="text-decoration:none;font-weight:bold;" target="_blank" href="https://wordpress.org/support/theme/viral-express/reviews/?filter=5#new-post">', '</a>', '<span class="viral-express-notice-star"><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span><span class="dashicons dashicons-star-filled"></span></span>'
                         );
                         ?>
                     </p>

@@ -253,8 +253,6 @@ $wp_customize->add_control(new Viral_Express_Toggle_Control($wp_customize, 'vira
 
 
 // Seasonal campaigns swap the banner copy automatically - see viral_express_get_active_campaign().
-// During a sale the card leads with the sale and drops the list price, which
-// would contradict the discount shown at checkout.
 $viral_express_campaign = viral_express_get_active_campaign();
 
 $wp_customize->add_section(new Viral_Express_Pro_Banner_Section($wp_customize, 'viral-express-pro-section', array(

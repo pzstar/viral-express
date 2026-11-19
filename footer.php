@@ -44,7 +44,7 @@ $footer_col = $count - 2;
         <div class="ht-bottom-footer">
             <div class="ht-container">
                 <div class="ht-site-info">
-                    <?php echo do_shortcode($viral_express_footer_copyright); ?>
+                    <?php echo do_shortcode(str_replace('[display-year]', viral_express_current_year(), $viral_express_footer_copyright)); ?>
                 </div><!-- #site-info -->
             </div>
         </div>

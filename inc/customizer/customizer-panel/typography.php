@@ -245,19 +245,6 @@ $wp_customize->add_control(new Viral_Express_Range_Slider_Control($wp_customize,
     )
 )));
 
-$wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral_express_more_typography_section', array(
-    'title' => esc_html__('Other Typography', 'viral-express'),
-    'panel' => 'viral_express_typography_panel',
-    'priority' => 1000,
-    'class' => 'ht--boxed',
-    'options' => array(
-        '<a href="javascript:wp.customize.section(\'viral_express_menu_section\').focus();">' . esc_html__('Menu & Sub Menu', 'viral-express') . '</a>',
-        '<a href="javascript:wp.customize.section(\'viral_express_title_bar_section\').focus();">' . esc_html__('Page Banner (Header Title)', 'viral-express') . '</a>',
-        '<a href="javascript:wp.customize.section(\'viral_express_frontpage_settings\').focus();">' . esc_html__('Front Page Block Title', 'viral-express') . '</a>',
-        '<a href="javascript:wp.customize.section(\'viral_express_frontpage_settings\').focus();">' . esc_html__('Front Page Post Title', 'viral-express') . '</a>',
-    )
-)));
-
 $wp_customize->add_section(new Viral_Express_Upgrade_Section($wp_customize, 'viral-express-hcfu-section', array(
     'title' => esc_html__('Want To Use Custom Fonts?', 'viral-express'),
     'panel' => 'viral_express_typography_panel',

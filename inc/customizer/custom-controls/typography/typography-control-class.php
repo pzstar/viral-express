@@ -41,16 +41,16 @@ class Viral_Express_Typography_Control extends WP_Customize_Control {
         parent::__construct($manager, $id, $args);
         // Make sure we have labels.
         $this->l10n = wp_parse_args(
-            $this->l10n, array(
-                'family' => esc_html__('Font Family', 'viral-express'),
-                'style' => esc_html__('Font Weight/Style', 'viral-express'),
-                'text_transform' => esc_html__('Text Transform', 'viral-express'),
-                'text_decoration' => esc_html__('Text Decoration', 'viral-express'),
-                'size' => esc_html__('Font Size', 'viral-express'),
-                'line_height' => esc_html__('Line Height', 'viral-express'),
-                'letter_spacing' => esc_html__('Letter Spacing', 'viral-express'),
-                'color' => esc_html__('Font Color', 'viral-express')
-            )
+                $this->l10n, array(
+            'family' => esc_html__('Font Family', 'viral-express'),
+            'style' => esc_html__('Font Weight/Style', 'viral-express'),
+            'text_transform' => esc_html__('Text Transform', 'viral-express'),
+            'text_decoration' => esc_html__('Text Decoration', 'viral-express'),
+            'size' => esc_html__('Font Size', 'viral-express'),
+            'line_height' => esc_html__('Line Height', 'viral-express'),
+            'letter_spacing' => esc_html__('Letter Spacing', 'viral-express'),
+            'color' => esc_html__('Font Color', 'viral-express')
+                )
         );
     }
 
@@ -149,18 +149,13 @@ class Viral_Express_Typography_Control extends WP_Customize_Control {
                 <# } #>
 
                 <select {{{ data.family.link }}} data-default="{{data.family.default}}">
-                    <# if ( data.family.choices ) { 
-                    _.each(data.family.choices, function(options){
-                    #>
+                    <# if ( data.family.choices ) { _.each(data.family.choices, function(options){ #>
                     <optgroup label="{{options.label}}">
                         <# _.each( options.fonts, function( label, value ) { #>
                         <option value="{{ label.family }}" <# if ( label.family === data.family.value ) { #> selected="selected" <# } #>>{{ label.family }}</option>
                         <# } ) #>
                     </optgroup>
-                    <#
-                    })
-                    }
-                    #>
+                    <# }) } #>
                 </select>
             </li>
             <# } #>
@@ -373,7 +368,7 @@ class Viral_Express_Typography_Control extends WP_Customize_Control {
                 <# } #>
 
                 <div class="customize-control-content">
-                    <input class="ht--color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e('Hex Value', 'viral-express'); ?>" {{{ data.color.link }}} value="{{ data.color.value }}"  />
+                    <input class="ht--color-picker-hex" type="text" maxlength="7" placeholder="<?php esc_attr_e('Hex Value', 'viral-express'); ?>" {{{ data.color.link }}} value="{{ data.color.value }}" />
                 </div>
             </li>
             <# } #>

@@ -43,7 +43,7 @@ class Viral_Express_Upgrade_Info_Control extends WP_Customize_Control {
         }
 
         if ($this->upgrade_url && false !== $this->upgrade_note) {
-            $note = $this->upgrade_note ? $this->upgrade_note : esc_html__('$69 one-time. Unlimited sites, lifetime updates, no renewal fees.', 'viral-express');
+            $note = $this->upgrade_note ? $this->upgrade_note : apply_filters('viral_express_upgrade_note', esc_html__('One-time payment, lifetime updates, no renewal fees.', 'viral-express'));
             echo '<p class="ht--upgrade-note">' . esc_html($note) . '</p>';
         }
     }

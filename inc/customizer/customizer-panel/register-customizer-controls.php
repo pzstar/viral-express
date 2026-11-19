@@ -47,9 +47,9 @@ if (!class_exists('Viral_Express_Register_Customizer_Controls')) {
             ));
 
             if (is_rtl()) {
-                wp_enqueue_style('viral-express-customizer', VIRAL_EXPRESS_CUSTOMIZER_URL . 'customizer-panel/assets/customizer.rtl.css', array(), VIRAL_EXPRESS_VER);
+                wp_enqueue_style('viral-express-customizer', VIRAL_EXPRESS_CUSTOMIZER_URL . 'customizer-panel/assets/customizer.rtl.css', array('viral-express-customizer-control'), VIRAL_EXPRESS_VER);
             } else {
-                wp_enqueue_style('viral-express-customizer', VIRAL_EXPRESS_CUSTOMIZER_URL . 'customizer-panel/assets/customizer.css', array(), VIRAL_EXPRESS_VER);
+                wp_enqueue_style('viral-express-customizer', VIRAL_EXPRESS_CUSTOMIZER_URL . 'customizer-panel/assets/customizer.css', array('viral-express-customizer-control'), VIRAL_EXPRESS_VER);
             }
         }
 
@@ -61,3 +61,8 @@ if (!class_exists('Viral_Express_Register_Customizer_Controls')) {
 
     new Viral_Express_Register_Customizer_Controls();
 }
+
+// Price line under the Customizer upgrade notes.
+add_filter('viral_express_upgrade_note', function () {
+    return esc_html__('One-time payment: 1 site $69, unlimited sites $99. Lifetime updates, no renewal fees.', 'viral-express');
+});

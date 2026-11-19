@@ -20,7 +20,7 @@ $wp_customize->add_control(new Viral_Express_Tab_Control($wp_customize, 'viral_e
     'priority' => 1,
     'buttons' => array(
         array(
-            'name' => esc_html__('BLog Page', 'viral-express'),
+            'name' => esc_html__('Blog Page', 'viral-express'),
             'icon' => 'dashicons dashicons-welcome-write-blog',
             'fields' => array(
                 'viral_express_display_frontpage_sections',
